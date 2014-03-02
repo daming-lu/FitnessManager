@@ -1,51 +1,39 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-	<title>DreamHost</title>
-	<link media="all" rel="stylesheet" type="text/css" href="http://dreamhost.com/wp-content/themes/dreamhost/style.css" />
-</head>
-<body id="domains">
-<!---   --->
-<?php 
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DreamHost</title>
+    <link rel="stylesheet" href="css/foundation.css" />
+    <link rel="stylesheet" href="css/login.css" />
+    <script src="js/vendor/modernizr.js"></script>
+  </head>
+  <body id="domains">
+    <?php 
 // file_put_contents("logLogin", "main_login\n",FILE_APPEND|LOCK_EX);
   
 ?>
-<table width="300" border="0" align="center" cellpadding="0" cellspacing="1" bgcolor="#CCCCCC">
-<tr>
-
-<form name="form1" method="post" action="retrieveFromDB/checklogin.php">
-<td>
-<table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#FFFFFF">
-<tr>
-<td colspan="3"><strong>Member Login </strong></td>
-</tr>
-<tr>
-<td width="78">Username</td>
-<td width="6">:</td>
-<td width="294"><input name="myusername" type="text" id="myusername"></td>
-</tr>
-<tr>
-<td>Password</td>
-<td>:</td>
-<td><input name="mypassword" type="password" id="mypassword"></td>
-</tr>
-<tr>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-<td><input type="submit" name="Submit" value="Login"></td>
-</tr>
-</table>
-</td>
-</form>
-
-</tr>
-</table>
+<div id="logo" class="row">
+  <div class="small-12 medium-8 medium-centered columns">
+    <img src="assets/FitnessManager.png">
+    </img>
+  </div>
+</div>
+<div class="row">
+    <div id="login" class="panel small-12 medium-6 medium-centered columns">
+      <form id="loginForm"name="form1" method="post" action="retrieveFromDB/checklogin.php">
+	<label>Username:</label>
+	<input name="myusername" type="text" id="myusername" placeholder="Arnold">
+	  <label>Password:</label>
+	  <input name="mypassword" type="password" id="mypassword" placeholder="******">
+	    <input class="button" type="submit" name="Submit" value="Login">
+	    </form>
+	  </div>
+	</div>
+    <script src="js/vendor/jquery.js"></script>
+    <script src="js/foundation.min.js"></script>
 
 
-<!---   --->
-
-
-</body>
-</html>
+	</body>
+      </html>
 

@@ -38,6 +38,7 @@
     margin-top: 15px;
 }
 .tabs.vertical dd > a { padding-left: 2.8em; }
+.off-canvas-wrap, .off-canvas-wrap .inner-wrap, .main-section { height: 100%; }
 #fitness-manager-logo {
     position: fixed;
     bottom: 0;
@@ -52,7 +53,7 @@
 #fitness-manager-logo > a > img {
     margin-top: 5px;
 }
-dl.tabs.vertical {
+#sidebar {
     height: 100%;
     background: #efefef;
 }

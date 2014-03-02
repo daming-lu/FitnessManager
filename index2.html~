@@ -1,0 +1,497 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FitnessManager</title>
+    <link rel="stylesheet" href="css/foundation.css" />
+    <link rel="stylesheet" href="css/custom.css" />
+    <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    <script src="js/vendor/modernizr.js"></script>
+  </head>
+  <body>
+    <!-- <script> -->
+    <!--   if (window.XMLHttpRequest) -->
+    <!--   {// code for IE7+, Firefox, Chrome, Opera, Safari -->
+    <!--   xmlhttp=new XMLHttpRequest(); -->
+    <!--   } -->
+    <!--   else -->
+    <!--   {// code for IE6, IE5 -->
+    <!--   xmlhttp=new ActiveXObject("Microsoft.XMLHTTP"); -->
+    <!--   } -->
+    <!--   //xmlhttp.open("GET","cd_catalog.xml",false); -->
+    <!--   xmlhttp.open("GET","http://peirongli.dreamhosters.com/WiXdata/cd_catalog.xml",false); -->
+
+    <!--   xmlhttp.send(); -->
+    <!--   xmlDoc=xmlhttp.responseXML;  -->
+
+    <!--   document.write("<table border='1'>"); -->
+    <!-- 	var x=xmlDoc.getElementsByTagName("CD"); -->
+    <!-- 	for (i=0;i<x.length;i++) -->
+    <!-- 		     {  -->
+    <!-- 		     document.write("<tr><td>"); -->
+    <!-- 		     document.write(x[i].getElementsByTagName("ARTIST")[0].childNodes[0].nodeValue); -->
+    <!-- 		     document.write("</td><td>"); -->
+    <!-- 		     document.write(x[i].getElementsByTagName("TITLE")[0].childNodes[0].nodeValue); -->
+    <!-- 		     document.write("</td></tr>"); -->
+    <!-- 		     } -->
+    <!-- 		     document.write("</table>"); -->
+    <!-- 		     </script> -->
+
+    <!-- <script> -->
+    <!--   // Check for the various File API support. -->
+    <!--   if (window.File && window.FileReader && window.FileList && window.Blob) { -->
+    <!--   // Great success! All the File APIs are supported. -->
+    <!--   } else { -->
+    <!--   alert('The File APIs are not fully supported in this browser.'); -->
+    <!--   } -->
+    <!--   console.log("abc"); -->
+    <!--   var JSONObject= { -->
+    <!--   "name":"John Johnson", -->
+    <!--   "street":"Oslo West 555",  -->
+    <!--   "age":33, -->
+    <!--   "phone":"555 1234567"};	 -->
+    <!--   var json = JSON.stringify(JSONObject); -->
+    <!--   var encoded = btoa(json); -->
+    <!--   var xhr = new XMLHttpRequest(); -->
+    <!--   console.log("abc"); -->
+    <!--   xhr.open('POST','http://peirongli.dreamhosters.com/WiXdata/myServerPage.php',true); -->
+    <!--   console.log("abc"); -->
+    <!--   //	xhr.open('POST','http://peirongli.dreamhosters.com/WiXdata/myServerPage.php',true); -->
+    <!--   xhr.setRequestHeader('Content-type','application/x-www-form-urlencoded'); -->
+    <!--   xhr.send('json=' + encoded); -->
+    <!--   console.log("xyz"); -->
+    
+    <!--   /* -->
+    <!--   var fso, fileHandle; -->
+    <!--   fso = new ActiveXObject("Scripting.FileSystemObject"); -->
+    <!--   fileHandle = fso.CreateTextFile("testWrite", true); -->
+    <!--   var data = "test data"; -->
+    <!--   fileHandle.write(data); -->
+    <!--   fileHandle.close(); -->
+    <!--   */ -->
+    <!-- </script> -->
+    <div class="off-canvas-wrap">
+      <div class="inner-wrap">
+	<nav class="tab-bar show-for-small-only">
+	  <section class="left-small">
+            <a class="left-off-canvas-toggle menu-icon" ><span></span></a>
+	  </section>
+
+	  <section class="middle tab-bar-section">
+            <h1 class="title">Joe's Personal Training</h1>
+	  </section>
+	</nav>
+
+	<aside class="left-off-canvas-menu">
+	  <ul class="off-canvas-list">
+            <li><label>Foundation</label></li>
+	    <li><a href="#panel1a">Dashboard</a></li>
+	    <li><a href="#panel2a">Clients</a></li>
+	    <li><a href="#panel3a">Calculators</a></li>
+	  </ul>
+	</aside>
+	<section class="main-section">
+	  <nav class="top-bar hide-for-small-only" data-topbar>
+	    <ul class="title-area">
+	      <li class="name hide-for-small">
+		<h1>
+		  <a href="#">Joe's Personal Training</a>
+		</h1>
+	      </li>
+	      <li class="name-small name show-for-small-only">
+		<h1>
+		  <a href="#">Joe's Personal Training</a>
+		</h1>
+	      </li>
+	      <li class="toggle-topbar menu-icon"><a href="#">Menu</a></li>
+	    </ul>
+	    <section class="top-bar-section">
+	      <ul class="right">
+		<li class="has-form hide-for-medium-up">
+		  <a href="#" class="button">Add client</a>
+		</li>
+		<li class="has-dropdown hide-for-small-only">
+		  <a href="#">Patrick Perey</a>
+		  <ul class="dropdown">
+		    <li><a href="#">Settings</a></li>
+		    <li><a href="#">Logout</a></li>
+		  </ul>
+		</li>
+		<li class="divider"></li>
+		<li class="has-form">
+		  <a href="#" class="button">Add client</a>
+		</li>
+	      </ul>
+	      <ul class="right show-for-small-only">
+		<li><a href="#panel1a">Dashboard</a></li>
+		<li><a href="#panel2a">Clients</a></li>
+		<li><a href="#panel3a">Calculators</a></li>
+		<li class="has-dropdown show-for-small-only">
+		  <a href="#">Patrick Perey</a>
+		  <ul class="dropdown">
+		    <li><a href="#">Settings</a></li>
+		    <li><a href="#">Logout</a></li>
+		  </ul>
+		</li>
+	      </ul>
+	    </section>
+	  </nav>
+	  <dl id="sidebar" class="tabs vertical hide-for-small-only" data-tab>
+	    <dd class="active entypo-chart-line"><a href="#panel1a">Dashboard</a></dd>
+	    <dd class="entypo-users"><a href="#panel2a">Clients</a></dd>
+	    <dd class="entypo-plus-squared"><a href="#panel3a">Calculators</a></dd>
+	  </dl>
+	  <div class="tabs-content vertical">
+	    <div class="content active" id="panel1a">
+	      <div class="row">
+		<a href="#" data-dropdown="drop" class="button button-box-shadow tiny radius dropdown">Billy Paneda</a><br>
+		<ul id="drop" data-dropdown-content class="f-dropdown">
+		  <li><a href="#">Joe Schmo</a></li>
+		  <li><a href="#">Bill Cosby</a></li>
+		  <li><a href="#">Jane Simpson</a></li>
+		</ul>
+		<div class="row" data-equalizer>
+		  <div class="large-3 columns panel panel-text" data-equalizer-watch>
+		    <div class="header-container">
+		      <h4 class="panel-header">30-min Jog</h4>
+		    </div>
+		    Today
+		  </div>
+		  <div class="large-3 columns panel panel-text" data-equalizer-watch>
+		    <div class="header-container">
+		      <h4 class="panel-header">100 Push-ups</h4>
+		    </div>
+		    Challenge
+		  </div>
+		  <div class="large-3 columns panel panel-text" data-equalizer-watch>
+		    <div class="header-container">
+		      <h4 class="panel-header">5</h4>
+		    </div>
+		    Weight-lost
+		  </div>
+		  <div class="large-3 columns panel panel-text" data-equalizer-watch>
+		    <div class="header-container">
+		      <h4 class="panel-header">Just Do It</h4>
+		    </div>
+		    Motivation
+		  </div>
+		</div>
+	      </div>
+              <div class="row">
+		<div class="small-12 columns">
+		  <h4 id="progress-bars">Progress Bars</h4>
+		  <div class="progress large-6"><span class="meter" style="width: 40%"></span></div>
+		  <div class="radius progress success large-8"><span class="meter" style="width: 80%"></span></div>
+		  <div class="nice round progress alert large-10"><span class="meter" style="width: 30%"></span></div>
+		  <div class="nice secondary progress"><span class="meter" style="width: 50%"></span></div>
+		</div>
+              </div>
+              <div class="row">
+		<div id="piechart" class="small-12 medium-4 columns">            
+		</div>
+		<div class="small-12 medium-4 columns">
+		  
+		</div>
+		<div class="small-12 medium-4 columns">
+		  
+		</div>
+		<div class="small-12 medium-4 columns">
+		  
+		</div>
+              </div>
+	    </div>
+	    <div class="content" id="panel2a">
+              <div class="small-12 columns">
+		<h1>All Clients</h1>
+		<ul class="pagination pagination"><li class="arrow unavailable"><a href="">← Previous</a></li> <li class="current"><a href="">1</a></li> <li><a rel="next" href="/users?page=2">2</a></li> <li><a href="/users?page=3">3</a></li> <li><a href="/users?page=4">4</a></li> <li class="arrow"><a rel="next" href="/users?page=2">Next →</a></li></ul>
+		<table>
+		  <thead>
+		    <tr>
+                      <th>User</th>
+                      <th>Delete</th>
+		    </tr>
+		  </thead>
+		  <tbody>
+		    <tr>
+                      <td><a href="/users/1">Seth Green</a></td>
+		    </tr>
+		    <tr>
+                      <td><a href="/users/2">Toni Greenholt</a></td>
+                      <td>
+			<a data-confirm="Are you sure you want to delete Toni Greenholt" data-method="delete" href="/users/2" rel="nofollow">delete</a>
+                      </td>
+		    </tr>
+		    <tr>
+                      <td><a href="/users/3">Mr. Anahi Moore</a></td>
+                      <td>
+			<a data-confirm="Are you sure you want to delete Mr. Anahi Moore" data-method="delete" href="/users/3" rel="nofollow">delete</a>
+                      </td>
+		    </tr>
+		    <tr>
+                      <td><a href="/users/4">Lisandro Abernathy</a></td>
+                      <td>
+			<a data-confirm="Are you sure you want to delete Lisandro Abernathy" data-method="delete" href="/users/4" rel="nofollow">delete</a>
+                      </td>
+		    </tr>
+		    <tr>
+                      <td><a href="/users/5">Melyssa Haley</a></td>
+                      <td>
+			<a data-confirm="Are you sure you want to delete Melyssa Haley" data-method="delete" href="/users/5" rel="nofollow">delete</a>
+                      </td>
+		    </tr>
+		    <tr>
+                      <td><a href="/users/6">Kian Steuber</a></td>
+                      <td>
+			<a data-confirm="Are you sure you want to delete Kian Steuber" data-method="delete" href="/users/6" rel="nofollow">delete</a>
+                      </td>
+		    </tr>
+		    <tr>
+                      <td><a href="/users/7">Ted Durgan II</a></td>
+                      <td>
+			<a data-confirm="Are you sure you want to delete Ted Durgan II" data-method="delete" href="/users/7" rel="nofollow">delete</a>
+                      </td>
+		    </tr>
+		    <tr>
+                      <td><a href="/users/8">Raegan Larkin</a></td>
+                      <td>
+			<a data-confirm="Are you sure you want to delete Raegan Larkin" data-method="delete" href="/users/8" rel="nofollow">delete</a>
+                      </td>
+		    </tr>
+		    <tr>
+                      <td><a href="/users/9">Alexzander Harber</a></td>
+                      <td>
+			<a data-confirm="Are you sure you want to delete Alexzander Harber" data-method="delete" href="/users/9" rel="nofollow">delete</a>
+                      </td>
+		    </tr>
+		    <tr>
+                      <td><a href="/users/10">Juliana Welch</a></td>
+                      <td>
+			<a data-confirm="Are you sure you want to delete Juliana Welch" data-method="delete" href="/users/10" rel="nofollow">delete</a>
+                      </td>
+		    </tr>
+		    <tr>
+                      <td><a href="/users/11">Wellington Bashirian</a></td>
+                      <td>
+			<a data-confirm="Are you sure you want to delete Wellington Bashirian" data-method="delete" href="/users/11" rel="nofollow">delete</a>
+                      </td>
+		    </tr>
+		    <tr>
+                      <td><a href="/users/12">Julio Larson</a></td>
+                      <td>
+			<a data-confirm="Are you sure you want to delete Julio Larson" data-method="delete" href="/users/12" rel="nofollow">delete</a>
+                      </td>
+		    </tr>
+		    <tr>
+                      <td><a href="/users/13">Aisha Schulist</a></td>
+                      <td>
+			<a data-confirm="Are you sure you want to delete Aisha Schulist" data-method="delete" href="/users/13" rel="nofollow">delete</a>
+                      </td>
+		    </tr>
+		    <tr>
+                      <td><a href="/users/14">Elissa Farrell</a></td>
+                      <td>
+			<a data-confirm="Are you sure you want to delete Elissa Farrell" data-method="delete" href="/users/14" rel="nofollow">delete</a>
+                      </td>
+		    </tr>
+		    <tr>
+                      <td><a href="/users/15">Dr. Seth Fadel</a></td>
+                      <td>
+			<a data-confirm="Are you sure you want to delete Dr. Seth Fadel" data-method="delete" href="/users/15" rel="nofollow">delete</a>
+                      </td>
+		    </tr>
+		    <tr>
+                      <td><a href="/users/16">Marta Pollich</a></td>
+                      <td>
+			<a data-confirm="Are you sure you want to delete Marta Pollich" data-method="delete" href="/users/16" rel="nofollow">delete</a>
+                      </td>
+		    </tr>
+		    <tr>
+                      <td><a href="/users/17">Demond Schultz</a></td>
+                      <td>
+			<a data-confirm="Are you sure you want to delete Demond Schultz" data-method="delete" href="/users/17" rel="nofollow">delete</a>
+                      </td>
+		    </tr>
+		    <tr>
+                      <td><a href="/users/18">Antonina Schultz</a></td>
+                      <td>
+			<a data-confirm="Are you sure you want to delete Antonina Schultz" data-method="delete" href="/users/18" rel="nofollow">delete</a>
+                      </td>
+		    </tr>
+		    <tr>
+                      <td><a href="/users/19">Miss Virgie Konopelski</a></td>
+                      <td>
+			<a data-confirm="Are you sure you want to delete Miss Virgie Konopelski" data-method="delete" href="/users/19" rel="nofollow">delete</a>
+                      </td>
+		    </tr>
+		    <tr>
+                      <td><a href="/users/20">Dr. Eden Berge</a></td>
+                      <td>
+			<a data-confirm="Are you sure you want to delete Dr. Eden Berge" data-method="delete" href="/users/20" rel="nofollow">delete</a>
+                      </td>
+		    </tr>
+		    <tr>
+                      <td><a href="/users/21">Enid Larkin</a></td>
+                      <td>
+			<a data-confirm="Are you sure you want to delete Enid Larkin" data-method="delete" href="/users/21" rel="nofollow">delete</a>
+                      </td>
+		    </tr>
+		    <tr>
+                      <td><a href="/users/22">Norwood Hintz V</a></td>
+                      <td>
+			<a data-confirm="Are you sure you want to delete Norwood Hintz V" data-method="delete" href="/users/22" rel="nofollow">delete</a>
+                      </td>
+		    </tr>
+		    <tr>
+                      <td><a href="/users/23">Ariel Trantow</a></td>
+                      <td>
+			<a data-confirm="Are you sure you want to delete Ariel Trantow" data-method="delete" href="/users/23" rel="nofollow">delete</a>
+                      </td>
+		    </tr>
+		    <tr>
+                      <td><a href="/users/24">Rosemary Halvorson</a></td>
+                      <td>
+			<a data-confirm="Are you sure you want to delete Rosemary Halvorson" data-method="delete" href="/users/24" rel="nofollow">delete</a>
+                      </td>
+		    </tr>
+		    <tr>
+                      <td><a href="/users/25">Raymond Shields MD</a></td>
+                      <td>
+			<a data-confirm="Are you sure you want to delete Raymond Shields MD" data-method="delete" href="/users/25" rel="nofollow">delete</a>
+                      </td>
+		    </tr>
+		    <tr>
+                      <td><a href="/users/26">Lennie Schowalter</a></td>
+                      <td>
+			<a data-confirm="Are you sure you want to delete Lennie Schowalter" data-method="delete" href="/users/26" rel="nofollow">delete</a>
+                      </td>
+		    </tr>
+		    <tr>
+                      <td><a href="/users/27">Buck Padberg</a></td>
+                      <td>
+			<a data-confirm="Are you sure you want to delete Buck Padberg" data-method="delete" href="/users/27" rel="nofollow">delete</a>
+                      </td>
+		    </tr>
+		    <tr>
+                      <td><a href="/users/28">Mr. Evans Dickens</a></td>
+                      <td>
+			<a data-confirm="Are you sure you want to delete Mr. Evans Dickens" data-method="delete" href="/users/28" rel="nofollow">delete</a>
+                      </td>
+		    </tr>
+		    <tr>
+                      <td><a href="/users/29">Sandra Schneider</a></td>
+                      <td>
+			<a data-confirm="Are you sure you want to delete Sandra Schneider" data-method="delete" href="/users/29" rel="nofollow">delete</a>
+                      </td>
+		    </tr>
+		    <tr>
+                      <td><a href="/users/30">Toney Langosh</a></td>
+                      <td>
+			<a data-confirm="Are you sure you want to delete Toney Langosh" data-method="delete" href="/users/30" rel="nofollow">delete</a>
+                      </td>
+		    </tr>
+		  </tbody>
+		</table>
+		<ul class="pagination pagination"><li class="arrow unavailable"><a href="">← Previous</a></li> <li class="current"><a href="">1</a></li> <li><a rel="next" href="/users?page=2">2</a></li> <li><a href="/users?page=3">3</a></li> <li><a href="/users?page=4">4</a></li> <li class="arrow"><a rel="next" href="/users?page=2">Next →</a></li></ul>
+              </div>
+	    </div>
+	    <div class="content" id="panel3a">
+	      <div class="row">
+		<dl id="calc-tabs" class="tabs radius hide-for-medium-down" data-tab>
+		  <dd class="active"><a href="#panel2-1">Basal Metabolic Rate</a></dd>
+		  <dd><a href="#panel2-2">Protein intake</a></dd>
+		  <dd><a href="#panel2-3">Body Mass Index</a></dd>
+		  <dd><a href="#panel2-4">1 Rep Max</a></dd>
+		</dl>
+		<div id="calcs" class="tabs-content">
+		  <div class="content active" id="panel2-1">
+		    <p>Lean Body Mass</p>
+		    <div id="lean" class="panel small-12 medium-6 medium-centered columns">
+		      <form id="lean-form" name="protein" onsubmit="return lean();">
+			<label>Weight(lb):</label>
+			<input id="weight" type="text" name="weight">
+			<label>Body Fat %:</label>
+			<input id="body-fat" type="text" name="body-fat">
+			<input class="button radius" type="submit" value="Calculate">
+		      </form>
+		      <div id="result-large" class="show-for-large-up">1115</div>
+		      <div id="result-medium" class="show-for-medium-only">1115</div>
+		      <div id="result-small" class="show-for-small-only">1115</div>
+		    </div>
+		  </div>
+		  <div class="content" id="panel2-2">
+		    <p>Recommended Protein Intake</p>
+		    <div id="protein" class="panel small-12 medium-6 medium-centered columns">
+		      <form id="protein-form" name="protein" onsubmit="return protein();">
+			<label>Weight(lb):</label>
+			<input id="weight" type="text" name="weight">
+			<input class="button radius" type="submit" value="Calculate">
+		      </form>
+		      <div id="result-large" class="show-for-large-up">1115</div>
+		      <div id="result-medium" class="show-for-medium-only">1115</div>
+		      <div id="result-small" class="show-for-small-only">1115</div>
+		    </div>
+		  </div>
+		  <div class="content" id="panel2-3">
+		    <p>Body Mass Index</p>
+		    <div id="bmi" class="panel small-12 medium-6 medium-centered columns">
+		      <form id="bmi-form" name="bmi" onsubmit="return bmi();">
+			<label>Weight(lb):</label>
+			<input id="weight" type="text" name="weight">
+			<label>Height(in):</label>
+			<input id="height" type="text" name="height">
+			<input class="button radius" type="submit" value="Calculate">
+		      </form>
+		      <div id="result-large" class="show-for-large-up">1115</div>
+		      <div id="result-medium" class="show-for-medium-only">1115</div>
+		      <div id="result-small" class="show-for-small-only">1115</div>
+		    </div>
+		    <table>
+		      <tbody><tr><td><b><abbr title="Body Mass Index">BMI</abbr></b></td><td><b>Classification</b></td></tr>
+			<tr><td>Less than 18.5</td><td>Underweight</td></tr>
+			<tr><td>From 18.5 to 25</td><td>Normal</td></tr>
+			<tr><td>Greater than 25</td><td>Overweight</td></tr>
+			<tr><td>Greater than 30</td><td>Obese</td></tr>
+		    </tbody></table>
+		  </div>
+		  <div class="content " id="panel2-4">
+		    <p>(Weight x 0.0333 x Reps) + Weight</p>
+		    <div id="rep-max" class="panel small-12 medium-6 medium-centered columns">
+		      <form id="oneRepMax" name="oneRepMax" onsubmit="return oneRepMax();">
+			<label>Weight(lb):</label>
+			<input id="weight" type="text" name="weight">
+			<label>Reps:</label>
+			<input id="reps" type="text" name="reps">
+			<input class="button radius" type="submit" value="Calculate">
+		      </form>
+		      <div id="result-large" class="show-for-large-up">1115</div>
+		      <div id="result-medium" class="show-for-medium-only">1115</div>
+		      <div id="result-small" class="show-for-small-only">1115</div>
+		    </div>
+		  </div>
+		</div>
+	      </div>
+	    </div>
+	    <div class="content" id="panel4a">
+              <p>Panel 4 content goes here.</p>
+	    </div>
+	  </div>
+	</section>
+
+	<a class="exit-off-canvas"></a>
+
+      </div>
+    </div>
+    <div id="fitness-manager-logo">Powered by <a href="#"><img src="images/fm-logo.png"></div>
+    <script src="js/vendor/jquery.js"></script>
+    <script src="js/foundation.min.js"></script>
+    <script src="js/calc.js"></script>
+    <script src="js/oneRepMax.js"></script>
+    <script src="js/prefixfree-1.0.7.js"></script>
+    <script src="js/piechart.js"></script>
+    <script src="js/line-chart.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
+  </body>
+</html>

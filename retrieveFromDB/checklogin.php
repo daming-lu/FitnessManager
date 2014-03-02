@@ -14,6 +14,9 @@ mysql_select_db("$db_name")or die("cannot select DB");
 $myusername=$_POST['myusername']; 
 $mypassword=$_POST['mypassword']; 
 
+$test1=$_GET['a'];
+file_put_contents("log1", "test1 == $test1\n",LOCK_EX | FILE_APPEND);
+
 // To protect MySQL injection (more detail about MySQL injection)
 $myusername = stripslashes($myusername);
 $mypassword = stripslashes($mypassword);
@@ -85,7 +88,7 @@ file_put_contents("log1","\nSuccess Login\n",FILE_APPEND|LOCK_EX);
 
 //header("location:login_success.php");
 //header("location:http://peirongli.dreamhosters.com/WiX/FitnessManager/#");
-header("location: http://peirongli.dreamhosters.com/WiX/FitnessManager2/D3_hist.html");
+header("location: http://peirongli.dreamhosters.com/WiX/FitnessManager2/D3_hist.html?p1=$rowId");
 				//http://peirongli.dreamhosters.com/learnD3/
 //echo "success\n";
 
