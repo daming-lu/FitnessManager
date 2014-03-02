@@ -6,9 +6,7 @@
     <title>FitnessManager</title>
     <link rel="stylesheet" href="css/foundation.css" />
     <link rel="stylesheet" href="css/custom.css" />
-    <link rel="stylesheet" href="hist.css" />
     <script src="http://d3js.org/d3.v3.min.js"></script>
-    <script src="hist.js"></script>
     <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
     <script src="js/vendor/modernizr.js"></script>
     <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
@@ -36,13 +34,12 @@
      var $showAddClientForm = false;
      
     function display1(e){
-        document.getElementById("client_FirstName").defaultValue="Goofy";
+        //document.getElementById("client_FirstName").defaultValue="Goofy";
 
     
     	console.log("display1");
     	$showAddClientForm = true;
-    	document.getElementById('yourDiv').style.display = 'block';
-    	document.getElementById('yourDiv2').style.display = 'none';
+    	document.getElementById('twilioForm').style.display = 'none';
     	/*
 		if (e.checked)
 			document.getElementById('yourDiv').style.display = 'block';
@@ -55,46 +52,30 @@
     	// http://imgur.com/HILNVqB
 	}
     
+//	twilioForm
+	$("#twilioForm").submit(function(event) {
+
+      /* stop form from submitting normally */
+      event.preventDefault();
+
+      /* get some values from elements on the page: */
+      var $form = $( this ),
+          url = $form.attr( 'action' );
+
+      /* Send the data using post */
+      var posting = $.post( url, { name: $('#name').val(), name2: $('#name2').val() } );
+
+      /* Put the results in a div */
+      posting.done(function( data ) {
+        alert('success');
+      });
+    });
 
     
     </script>        
   </head>
   <body>
-  <div id="yourDiv" style="display:none">
-   	<form id="formoid" action="http://peirongli.dreamhosters.com/WiX/FitnessManager2/retrieveFromDB/addClient.php" title="" method="post">
-        <div>
-            <label class="title">First Name</label>
-            <input type="text" id="client_FirstName" name="FirstName" >
-        </div>
-        <div>
-            <label class="title">Last Name</label>
-            <input type="text"  name="LastName" >
-        </div>
-        <div>
-            <label class="title">Username</label>
-            <input type="text"  name="Username" >            
-        </div>   
-        <div>
-            <label class="title">Age</label>
-            <input type="text"  name="Age" >            
-        </div>     
-        <div>
-            <label class="title">ImgURL</label>
-            <input type="text"  name="ImgURL" >            
-        </div>   
-        <div>
-            <label class="title">Weight</label>
-            <input type="text"  name="Weight1" >            
-        </div>  
-        <div>
-            <label class="title">Height</label>
-            <input type="text"  name="Height1" >            
-        </div>                                          
-        <div>
-            <input type="submit" id="submitButton"  name="submitButton" value="Submit">
-        </div>
- 	</form>  
-  </div>
+
   
     <!-- <script> -->
     <!--   if (window.XMLHttpRequest) -->
@@ -171,10 +152,7 @@
 
 	<aside class="left-off-canvas-menu">
 	  <ul class="off-canvas-list">
-	    <li class="has-form give-me-space">
-	      <a href="#" class="button" onClick="display1(this)">Add client</a>
 
-	    </li>
             <li><label>Links</label></li>
 	    <li><a href="#panel1a">Dashboard</a></li>
 	    <li><a href="#panel2a">Clients</a></li>
@@ -216,9 +194,7 @@
 		<li class="divider"></li>
 		<li class="has-form">
 		  <!--- <a href="#" class="button">Add client2</a> --->
-		  <div id="yourDiv2">
-			<input type="button" name="button"  value="Add New Client" onClick="display1(this)">
-			</div>
+
 <!---
 <input type="checkbox" onclick="display1(this)">Add more users</input>
 --->
@@ -283,20 +259,7 @@
 		  </div>
 		</div>
 	      </div>
-	      
-	      
-		 	<!---  Histogram starts --->
-           	<div>
-          		<h1> Hoooo </h1>
-				<div id="histhere">
-				<label class="histlabel"><input type="checkbox" id="input1" class="awesome"> Sort values2</label>
-				</div>
-				</iframe>
 
-
-           	</div>
-           	<!---  Histogram ends --->
-	      
               <div class="row">
 		<div class="small-12 columns">
 		  <h4 id="progress-bars">Progress Bars</h4>
@@ -306,6 +269,7 @@
 		  <div class="nice secondary progress"><span class="meter" style="width: 50%"></span></div>
 		</div>
               </div>
+              
               <div class="row">
 		<div id="piechart" class="small-12 medium-4 columns">            
 		</div>
@@ -319,6 +283,30 @@
 		  
 		</div>
               </div>
+              
+              <div class="row">
+              <div class="small-12 columns">
+              
+              <form id="twilioForm" action="http://peirongli.dreamhosters.com/WiX/FitnessManager2/testTwilio.php" title="" method="post">
+              
+              	<div id="notifyForm" style="display:block">
+              		<div>
+						<label class="title">From</label>
+						<input type="text"  name="FromName">
+						<textarea cols="40" rows="5" name="notes">
+							
+						</textarea>            
+					</div>
+              	</div>              
+				<div>
+					<input type="submit" id="submitButton"  name="submitButton" value="Submit" onClick="display1(this)">
+				</div>              
+              </form>
+
+              </div>
+              </div>
+
+              
 	    </div>
 	    <div class="content" id="panel2a">
               <div class="small-12 columns">
@@ -616,5 +604,4 @@
      <script>
        $(document).foundation();
      </script>
-   </body>
- </html>
+   </body

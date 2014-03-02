@@ -10,7 +10,11 @@
      *   directory to the folder containing this file, and load 
      *   localhost:8888/sendnotifications.php in a web browser.
      */
- 
+ file_put_contents("logTwilio","POST\n".print_r($_POST,true)."\n",LOCK_EX|FILE_APPEND);
+
+	$name = $_POST['FromName'];
+	$test = $_POST['notes'];
+
     // Step 1: Download the Twilio-PHP library from twilio.com/docs/libraries, 
     // and move it into the folder containing this file.
     require "/home/damlu/peirongli.dreamhosters.com/WiX/FitnessManager2/twilio-php-latest/Services/Twilio.php";
@@ -42,10 +46,16 @@
             $number,
  
             // the sms body
-            "Hey $name, Monkey Party at 6PM. Bring Bananas!"
+            "Hey, it is $name. $text\n"
         );
  
         // Display a confirmation message on the screen
-        echo "Sent message to $name";
+       // echo "Sent message to $name";
+       	//header("location:http://peirongli.dreamhosters.com/WiX/FitnessManager2/index2.html?p1=1"); 
+
+        header("location: http://peirongli.dreamhosters.com/WiX/FitnessManager2/clientdm.html"); 
+
     }
+    
+
     ?>

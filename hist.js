@@ -68,7 +68,7 @@ d3.tsv("data_Miles7days.tsv", function(error, data) {
   var sortTimeout = setTimeout(function() {
 //    d3.select("input").property("checked", true).each(change);
     d3.select(".awesome").property("checked", true).each(change);
-  }, 7000);
+  }, 17000);
 	
   function change() {
     clearTimeout(sortTimeout);
