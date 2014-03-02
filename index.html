@@ -1,0 +1,339 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FitnessManager</title>
+    <link rel="stylesheet" href="css/foundation.css" />
+    <link rel="stylesheet" href="css/custom.css" />
+    <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    <script src="js/vendor/modernizr.js"></script>
+  </head>
+  <body>
+    <nav class="top-bar" data-topbar>
+      <ul class="title-area">
+        <li class="name">
+          <h1>
+            <a href="#">Joe's Personal Training</a>
+          </h1>
+        </li>
+        <li class="toggle-topbar menu-icon"><a href="#">Menu</a></li>
+      </ul>
+      <section class="top-bar-section">
+        <!-- Right Nav Section -->
+        <ul class="right">
+          <li class="has-form hide-for-medium-up">
+            <a href="#" class="button">Add client</a>
+          </li>
+          <li class="has-dropdown hide-for-small-only">
+            <a href="#">Patrick Perey</a>
+            <ul class="dropdown">
+              <li><a href="#">Settings</a></li>
+              <li><a href="#">Logout</a></li>
+            </ul>
+          </li>
+          <li class="divider"></li>
+          <li class="has-form hide-for-small-only">
+            <a href="#" class="button">Add client</a>
+          </li>
+        </ul>
+        <ul class="right show-for-small-only">
+          <li><a href="#">Dashboard</a></li>
+          <li><a href="#">Clients</a></li>
+          <li class="has-dropdown show-for-small-only">
+            <a href="#">Patrick Perey</a>
+            <ul class="dropdown">
+              <li><a href="#">Settings</a></li>
+              <li><a href="#">Logout</a></li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+    </nav>
+    <dl class="tabs vertical hide-for-small-only" data-tab>
+      <dd class="active"><a href="#panel1a">Dashboard</a></dd>
+      <dd><a href="#panel2a">Clients</a></dd>
+    </dl>
+    <div class="tabs-content vertical">
+      <div class="content active" id="panel1a">
+        <div class="row">
+          <div class="small-12 columns">
+            <h4 id="progress-bars">Progress Bars</h4>
+            <div class="progress large-6"><span class="meter" style="width: 40%"></span></div>
+            <div class="radius progress success large-8"><span class="meter" style="width: 80%"></span></div>
+            <div class="nice round progress alert large-10"><span class="meter" style="width: 30%"></span></div>
+            <div class="nice secondary progress"><span class="meter" style="width: 50%"></span></div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="small-12 medium-4 columns">
+            <script>
+              var width = 960,
+              height = 500,
+              radius = Math.min(width, height) / 2;
+
+              var color = d3.scale.ordinal()
+              .range(["#98abc5", "#8a89a6", "#7b6888", "#6b486b", "#a05d56", "#d0743c", "#ff8c00"]);
+
+              var arc = d3.svg.arc()
+              .outerRadius(radius - 10)
+              .innerRadius(radius - 70);
+
+              var pie = d3.layout.pie()
+              .sort(null)
+              .value(function(d) { return d.population; });
+
+              var svg = d3.select("body").append("svg")
+              .attr("width", width)
+              .attr("height", height)
+              .append("g")
+              .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
+
+              d3.csv("data.csv", function(error, data) {
+
+              data.forEach(function(d) {
+              d.population = +d.population;
+              });
+
+              var g = svg.selectAll(".arc")
+              .data(pie(data))
+              .enter().append("g")
+              .attr("class", "arc");
+
+              g.append("path")
+              .attr("d", arc)
+              .style("fill", function(d) { return color(d.data.age); });
+
+              g.append("text")
+              .attr("transform", function(d) { return "translate(" + arc.centroid(d) + ")"; })
+              .attr("dy", ".35em")
+              .style("text-anchor", "middle")
+              .text(function(d) { return d.data.age; });
+
+              });
+
+            </script>
+            
+          </div>
+          <div class="small-12 medium-4 columns">
+            
+          </div>
+          <div class="small-12 medium-4 columns">
+            
+          </div>
+          <div class="small-12 medium-4 columns">
+            
+          </div>
+        </div>
+      </div>
+      <div class="content" id="panel2a">
+        <div class="small-12 columns">
+          <h1>
+            All users
+          </h1>
+          <ul class="pagination pagination"><li class="arrow unavailable"><a href="">← Previous</a></li> <li class="current"><a href="">1</a></li> <li><a rel="next" href="/users?page=2">2</a></li> <li><a href="/users?page=3">3</a></li> <li><a href="/users?page=4">4</a></li> <li class="arrow"><a rel="next" href="/users?page=2">Next →</a></li></ul>
+          <table>
+            <thead>
+              <tr>
+                <th>User</th>
+                <th>Delete</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><a href="/users/1">Example User</a></td>
+              </tr>
+              <tr>
+                <td><a href="/users/2">Toni Greenholt</a></td>
+                <td>
+                  <a data-confirm="Are you sure you want to delete Toni Greenholt" data-method="delete" href="/users/2" rel="nofollow">delete</a>
+                </td>
+              </tr>
+              <tr>
+                <td><a href="/users/3">Mr. Anahi Moore</a></td>
+                <td>
+                  <a data-confirm="Are you sure you want to delete Mr. Anahi Moore" data-method="delete" href="/users/3" rel="nofollow">delete</a>
+                </td>
+              </tr>
+              <tr>
+                <td><a href="/users/4">Lisandro Abernathy</a></td>
+                <td>
+                  <a data-confirm="Are you sure you want to delete Lisandro Abernathy" data-method="delete" href="/users/4" rel="nofollow">delete</a>
+                </td>
+              </tr>
+              <tr>
+                <td><a href="/users/5">Melyssa Haley</a></td>
+                <td>
+                  <a data-confirm="Are you sure you want to delete Melyssa Haley" data-method="delete" href="/users/5" rel="nofollow">delete</a>
+                </td>
+              </tr>
+              <tr>
+                <td><a href="/users/6">Kian Steuber</a></td>
+                <td>
+                  <a data-confirm="Are you sure you want to delete Kian Steuber" data-method="delete" href="/users/6" rel="nofollow">delete</a>
+                </td>
+              </tr>
+              <tr>
+                <td><a href="/users/7">Ted Durgan II</a></td>
+                <td>
+                  <a data-confirm="Are you sure you want to delete Ted Durgan II" data-method="delete" href="/users/7" rel="nofollow">delete</a>
+                </td>
+              </tr>
+              <tr>
+                <td><a href="/users/8">Raegan Larkin</a></td>
+                <td>
+                  <a data-confirm="Are you sure you want to delete Raegan Larkin" data-method="delete" href="/users/8" rel="nofollow">delete</a>
+                </td>
+              </tr>
+              <tr>
+                <td><a href="/users/9">Alexzander Harber</a></td>
+                <td>
+                  <a data-confirm="Are you sure you want to delete Alexzander Harber" data-method="delete" href="/users/9" rel="nofollow">delete</a>
+                </td>
+              </tr>
+              <tr>
+                <td><a href="/users/10">Juliana Welch</a></td>
+                <td>
+                  <a data-confirm="Are you sure you want to delete Juliana Welch" data-method="delete" href="/users/10" rel="nofollow">delete</a>
+                </td>
+              </tr>
+              <tr>
+                <td><a href="/users/11">Wellington Bashirian</a></td>
+                <td>
+                  <a data-confirm="Are you sure you want to delete Wellington Bashirian" data-method="delete" href="/users/11" rel="nofollow">delete</a>
+                </td>
+              </tr>
+              <tr>
+                <td><a href="/users/12">Julio Larson</a></td>
+                <td>
+                  <a data-confirm="Are you sure you want to delete Julio Larson" data-method="delete" href="/users/12" rel="nofollow">delete</a>
+                </td>
+              </tr>
+              <tr>
+                <td><a href="/users/13">Aisha Schulist</a></td>
+                <td>
+                  <a data-confirm="Are you sure you want to delete Aisha Schulist" data-method="delete" href="/users/13" rel="nofollow">delete</a>
+                </td>
+              </tr>
+              <tr>
+                <td><a href="/users/14">Elissa Farrell</a></td>
+                <td>
+                  <a data-confirm="Are you sure you want to delete Elissa Farrell" data-method="delete" href="/users/14" rel="nofollow">delete</a>
+                </td>
+              </tr>
+              <tr>
+                <td><a href="/users/15">Dr. Seth Fadel</a></td>
+                <td>
+                  <a data-confirm="Are you sure you want to delete Dr. Seth Fadel" data-method="delete" href="/users/15" rel="nofollow">delete</a>
+                </td>
+              </tr>
+              <tr>
+                <td><a href="/users/16">Marta Pollich</a></td>
+                <td>
+                  <a data-confirm="Are you sure you want to delete Marta Pollich" data-method="delete" href="/users/16" rel="nofollow">delete</a>
+                </td>
+              </tr>
+              <tr>
+                <td><a href="/users/17">Demond Schultz</a></td>
+                <td>
+                  <a data-confirm="Are you sure you want to delete Demond Schultz" data-method="delete" href="/users/17" rel="nofollow">delete</a>
+                </td>
+              </tr>
+              <tr>
+                <td><a href="/users/18">Antonina Schultz</a></td>
+                <td>
+                  <a data-confirm="Are you sure you want to delete Antonina Schultz" data-method="delete" href="/users/18" rel="nofollow">delete</a>
+                </td>
+              </tr>
+              <tr>
+                <td><a href="/users/19">Miss Virgie Konopelski</a></td>
+                <td>
+                  <a data-confirm="Are you sure you want to delete Miss Virgie Konopelski" data-method="delete" href="/users/19" rel="nofollow">delete</a>
+                </td>
+              </tr>
+              <tr>
+                <td><a href="/users/20">Dr. Eden Berge</a></td>
+                <td>
+                  <a data-confirm="Are you sure you want to delete Dr. Eden Berge" data-method="delete" href="/users/20" rel="nofollow">delete</a>
+                </td>
+              </tr>
+              <tr>
+                <td><a href="/users/21">Enid Larkin</a></td>
+                <td>
+                  <a data-confirm="Are you sure you want to delete Enid Larkin" data-method="delete" href="/users/21" rel="nofollow">delete</a>
+                </td>
+              </tr>
+              <tr>
+                <td><a href="/users/22">Norwood Hintz V</a></td>
+                <td>
+                  <a data-confirm="Are you sure you want to delete Norwood Hintz V" data-method="delete" href="/users/22" rel="nofollow">delete</a>
+                </td>
+              </tr>
+              <tr>
+                <td><a href="/users/23">Ariel Trantow</a></td>
+                <td>
+                  <a data-confirm="Are you sure you want to delete Ariel Trantow" data-method="delete" href="/users/23" rel="nofollow">delete</a>
+                </td>
+              </tr>
+              <tr>
+                <td><a href="/users/24">Rosemary Halvorson</a></td>
+                <td>
+                  <a data-confirm="Are you sure you want to delete Rosemary Halvorson" data-method="delete" href="/users/24" rel="nofollow">delete</a>
+                </td>
+              </tr>
+              <tr>
+                <td><a href="/users/25">Raymond Shields MD</a></td>
+                <td>
+                  <a data-confirm="Are you sure you want to delete Raymond Shields MD" data-method="delete" href="/users/25" rel="nofollow">delete</a>
+                </td>
+              </tr>
+              <tr>
+                <td><a href="/users/26">Lennie Schowalter</a></td>
+                <td>
+                  <a data-confirm="Are you sure you want to delete Lennie Schowalter" data-method="delete" href="/users/26" rel="nofollow">delete</a>
+                </td>
+              </tr>
+              <tr>
+                <td><a href="/users/27">Buck Padberg</a></td>
+                <td>
+                  <a data-confirm="Are you sure you want to delete Buck Padberg" data-method="delete" href="/users/27" rel="nofollow">delete</a>
+                </td>
+              </tr>
+              <tr>
+                <td><a href="/users/28">Mr. Evans Dickens</a></td>
+                <td>
+                  <a data-confirm="Are you sure you want to delete Mr. Evans Dickens" data-method="delete" href="/users/28" rel="nofollow">delete</a>
+                </td>
+              </tr>
+              <tr>
+                <td><a href="/users/29">Sandra Schneider</a></td>
+                <td>
+                  <a data-confirm="Are you sure you want to delete Sandra Schneider" data-method="delete" href="/users/29" rel="nofollow">delete</a>
+                </td>
+              </tr>
+              <tr>
+                <td><a href="/users/30">Toney Langosh</a></td>
+                <td>
+                  <a data-confirm="Are you sure you want to delete Toney Langosh" data-method="delete" href="/users/30" rel="nofollow">delete</a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <ul class="pagination pagination"><li class="arrow unavailable"><a href="">← Previous</a></li> <li class="current"><a href="">1</a></li> <li><a rel="next" href="/users?page=2">2</a></li> <li><a href="/users?page=3">3</a></li> <li><a href="/users?page=4">4</a></li> <li class="arrow"><a rel="next" href="/users?page=2">Next →</a></li></ul>
+        </div>
+      </div>
+      <div class="content" id="panel3a">
+        <p>Panel 3 content goes here.</p>
+      </div>
+      <div class="content" id="panel4a">
+        <p>Panel 4 content goes here.</p>
+      </div>
+    </div>
+    <div id="fitness-manager-logo">Powered by <a href="#"><img src="images/fm-logo.png"></div>
+    <script src="js/vendor/jquery.js"></script>
+    <script src="js/foundation.min.js"></script>
+    <script>
+$(document).foundation();
+</script>
+  </body>
+</html>
