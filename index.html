@@ -74,7 +74,12 @@
     <div class="fixed">
       <nav class="top-bar" data-topbar>
 	<ul class="title-area">
-          <li class="name">
+          <li class="name hide-for-small">
+            <h1>
+              <a href="#">Joe's Personal Training</a>
+            </h1>
+          </li>
+          <li class="name-small name show-for-small-only">
             <h1>
               <a href="#">Joe's Personal Training</a>
             </h1>
@@ -100,8 +105,9 @@
             </li>
           </ul>
           <ul class="right show-for-small-only">
-            <li><a href="#">Dashboard</a></li>
-            <li><a href="#">Clients</a></li>
+            <li><a href="#panel1a">Dashboard</a></li>
+            <li><a href="#panel2a">Clients</a></li>
+            <li><a href="#panel3a">Calculators</a></li>
             <li class="has-dropdown show-for-small-only">
               <a href="#">Patrick Perey</a>
               <ul class="dropdown">
@@ -114,20 +120,48 @@
       </nav>
     </div>
     <dl class="tabs vertical hide-for-small-only" data-tab>
-      <dd class="active"><a href="#panel1a">Dashboard</a></dd>
-      <dd><a href="#panel2a">Clients</a></dd>
-      <dd><a href="#panel3a">Calculators</a></dd>
+      <dd class="active entypo-chart-line"><a href="#panel1a">Dashboard</a></dd>
+      <dd class="entypo-users"><a href="#panel2a">Clients</a></dd>
+      <dd class="entypo-plus-squared"><a href="#panel3a">Calculators</a></dd>
     </dl>
     <div class="tabs-content vertical">
       <div class="content active" id="panel1a">
-        <div class="row">
-          <div class="small-12 columns">
-	    <a href="#" data-dropdown="drop" class="button secondary small radius dropdown">Billy Paneda</a><br>
+	<div class="row">
+	    <a href="#" data-dropdown="drop" class="button button-box-shadow tiny radius dropdown">Billy Paneda</a><br>
 	    <ul id="drop" data-dropdown-content class="f-dropdown">
 	      <li><a href="#">Joe Schmo</a></li>
 	      <li><a href="#">Bill Cosby</a></li>
 	      <li><a href="#">Jane Simpson</a></li>
 	    </ul>
+	  <div class="row" data-equalizer>
+	    <div class="large-3 columns panel panel-text" data-equalizer-watch>
+	      <div class="header-container">
+		<h4 class="panel-header">30-min Jog</h4>
+	      </div>
+	      Today
+	    </div>
+	    <div class="large-3 columns panel panel-text" data-equalizer-watch>
+	      <div class="header-container">
+		<h4 class="panel-header">100 Push-ups</h4>
+	      </div>
+	      Challenge
+	    </div>
+	    <div class="large-3 columns panel panel-text" data-equalizer-watch>
+	      <div class="header-container">
+		<h4 class="panel-header">5</h4>
+	      </div>
+	      Weight-lost
+	    </div>
+	    <div class="large-3 columns panel panel-text" data-equalizer-watch>
+	      <div class="header-container">
+		<h4 class="panel-header">Just Do It</h4>
+	      </div>
+	      Motivation
+	    </div>
+	  </div>
+	</div>
+        <div class="row">
+          <div class="small-12 columns">
             <h4 id="progress-bars">Progress Bars</h4>
             <div class="progress large-6"><span class="meter" style="width: 40%"></span></div>
             <div class="radius progress success large-8"><span class="meter" style="width: 80%"></span></div>
@@ -151,7 +185,7 @@
       </div>
       <div class="content" id="panel2a">
         <div class="small-12 columns">
-          <h1>All users</h1>
+          <h1>All Clients</h1>
           <ul class="pagination pagination"><li class="arrow unavailable"><a href="">← Previous</a></li> <li class="current"><a href="">1</a></li> <li><a rel="next" href="/users?page=2">2</a></li> <li><a href="/users?page=3">3</a></li> <li><a href="/users?page=4">4</a></li> <li class="arrow"><a rel="next" href="/users?page=2">Next →</a></li></ul>
           <table>
             <thead>
@@ -162,7 +196,7 @@
             </thead>
             <tbody>
               <tr>
-                <td><a href="/users/1">Example User</a></td>
+                <td><a href="/users/1">Seth Green</a></td>
               </tr>
               <tr>
                 <td><a href="/users/2">Toni Greenholt</a></td>
@@ -345,46 +379,55 @@
       </div>
       <div class="content" id="panel3a">
 	<div class="row">
-	  <dl class="tabs" data-tab>
+	  <dl id="calc-tabs" class="tabs radius hide-for-medium-down" data-tab>
 	    <dd class="active"><a href="#panel2-1">Basal Metabolic Rate</a></dd>
-	    <dd><a href="#panel2-2">Calorie Burn</a></dd>
+	    <dd><a href="#panel2-2">Protein intake</a></dd>
 	    <dd><a href="#panel2-3">Body Mass Index</a></dd>
 	    <dd><a href="#panel2-4">1 Rep Max</a></dd>
 	  </dl>
-	  <div class="tabs-content">
+	  <div id="calcs" class="tabs-content">
 	    <div class="content active" id="panel2-1">
-	      <div id="calculator">
-		<!-- Screen and clear key -->
-		<div class="top">
-		  <span class="clear">C</span>
-		  <div class="screen"></div>
-		</div>
-		
-		<div class="keys">
-		  <!-- operators and other keys -->
-		  <span>7</span>
-		  <span>8</span>
-		  <span>9</span>
-		  <span class="operator">+</span>
-		  <span>4</span>
-		  <span>5</span>
-		  <span>6</span>
-		  <span class="operator">-</span>
-		  <span>1</span>
-		  <span>2</span>
-		  <span>3</span>
-		  <span class="operator">÷</span>
-		  <span>0</span>
-		  <span>.</span>
-		  <span class="eval">=</span>
-		  <span class="operator">x</span>
-		</div>
+	      <p>Lean Body Mass</p>
+	      <div id="lean" class="panel small-12 medium-6 medium-centered columns">
+		<form id="lean-form" name="protein" onsubmit="return lean();">
+		  <label>Weight(lb):</label>
+		  <input id="weight" type="text" name="weight">
+		  <label>Body Fat %:</label>
+		  <input id="body-fat" type="text" name="body-fat">
+		  <input class="button radius" type="submit" value="Calculate">
+		</form>
+		<div id="result-large" class="show-for-large-up">1115</div>
+		<div id="result-medium" class="show-for-medium-only">1115</div>
+		<div id="result-small" class="show-for-small-only">1115</div>
 	      </div>
 	    </div>
 	    <div class="content" id="panel2-2">
-	      <p>Second panel content goes here...</p>
+	      <p>Recommended Protein Intake</p>
+	      <div id="protein" class="panel small-12 medium-6 medium-centered columns">
+		<form id="protein-form" name="protein" onsubmit="return protein();">
+		  <label>Weight(lb):</label>
+		  <input id="weight" type="text" name="weight">
+		  <input class="button radius" type="submit" value="Calculate">
+		</form>
+		<div id="result-large" class="show-for-large-up">1115</div>
+		<div id="result-medium" class="show-for-medium-only">1115</div>
+		<div id="result-small" class="show-for-small-only">1115</div>
+	      </div>
 	    </div>
 	    <div class="content" id="panel2-3">
+	      <p>Body Mass Index</p>
+	      <div id="bmi" class="panel small-12 medium-6 medium-centered columns">
+		<form id="bmi-form" name="bmi" onsubmit="return bmi();">
+		  <label>Weight(lb):</label>
+		  <input id="weight" type="text" name="weight">
+		  <label>Height(in):</label>
+		  <input id="height" type="text" name="height">
+		  <input class="button radius" type="submit" value="Calculate">
+		</form>
+		<div id="result-large" class="show-for-large-up">1115</div>
+		<div id="result-medium" class="show-for-medium-only">1115</div>
+		<div id="result-small" class="show-for-small-only">1115</div>
+	      </div>
 	      <table>
 		<tbody><tr><td><b><abbr title="Body Mass Index">BMI</abbr></b></td><td><b>Classification</b></td></tr>
 		  <tr><td>Less than 18.5</td><td>Underweight</td></tr>
@@ -393,8 +436,20 @@
 		  <tr><td>Greater than 30</td><td>Obese</td></tr>
 	      </tbody></table>
 	    </div>
-	    <div class="content" id="panel2-4">
+	    <div class="content " id="panel2-4">
 	      <p>(Weight x 0.0333 x Reps) + Weight</p>
+	      <div id="rep-max" class="panel small-12 medium-6 medium-centered columns">
+		<form id="oneRepMax" name="oneRepMax" onsubmit="return oneRepMax();">
+		  <label>Weight:</label>
+		  <input id="weight" type="text" name="weight">
+		  <label>Reps:</label>
+		  <input id="reps" type="text" name="reps">
+		  <input class="button radius" type="submit" value="Calculate">
+		</form>
+		<div id="result-large" class="show-for-large-up">1115</div>
+		<div id="result-medium" class="show-for-medium-only">1115</div>
+		<div id="result-small" class="show-for-small-only">1115</div>
+	      </div>
 	    </div>
 	  </div>
 	</div>
@@ -407,8 +462,10 @@
     <script src="js/vendor/jquery.js"></script>
     <script src="js/foundation.min.js"></script>
     <script src="js/calc.js"></script>
+    <script src="js/oneRepMax.js"></script>
     <script src="js/prefixfree-1.0.7.js"></script>
     <script src="js/piechart.js"></script>
+    <script src="js/line-chart.js"></script>
     <script>
       $(document).foundation();
     </script>

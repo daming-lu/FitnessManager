@@ -1,3 +1,43 @@
+@import url(http://weloveiconfonts.com/api/?family=entypo);
+
+/* entypo */
+[class*="entypo-"]:before {
+  font-family: 'entypo', sans-serif;
+}
+.active.entypo-chart-line:before {
+    color: white;
+    position: absolute;
+    margin-left: 18px;
+    margin-top: 15px;
+}
+.entypo-chart-line:before {
+    position: absolute;
+    margin-left: 18px;
+    margin-top: 15px;
+}
+.entypo-users:before {
+    position: absolute;
+    margin-left: 18px;
+    margin-top: 15px;
+}
+.active.entypo-users:before {
+    color: white;
+    position: absolute;
+    margin-left: 18px;
+    margin-top: 15px;
+}
+.entypo-plus-squared:before {
+    position: absolute;
+    margin-left: 18px;
+    margin-top: 15px;
+}
+.active.entypo-plus-squared:before {
+    color: white;
+    position: absolute;
+    margin-left: 18px;
+    margin-top: 15px;
+}
+.tabs.vertical dd > a { padding-left: 2.8em; }
 #fitness-manager-logo {
     position: fixed;
     bottom: 0;
@@ -16,15 +56,48 @@ dl.tabs.vertical {
     height: 100%;
     background: #efefef;
 }
-.top-bar .name { width: 416px; }
+dl.tabs.vertical dd {
+    border-bottom: 1px solid rgb(222, 220, 220);
+}
+.top-bar .name { width: 390px; }
+.top-bar .name-small { width: 416px; }
+.top-bar-section ul li > a.button { 
+    border-radius: 3px;
+    background: #eb9628;
+    box-shadow: 0px 4px #C37D23;
+    -webkit-transition: box-shadow;
+}
+.top-bar-section ul li > a.button:hover { 
+    background: #DB8D28; 
+    box-shadow: 0px 4px #925C18;
+}
+dd.active a { background: #eb9628 !important; color: white; }
+dd.active a:hover { background: #DB8D28; }
 .tabs-content.vertical {
     padding: 2em 0;
-    max-height: 100%;
+    min-height: 100%;
     overflow-y: scroll;
     margin-bottom: 0;
+    box-shadow: 11px 1px 23px 4px rgba(0,0,0,0.5);
 }
+#calcs .content > p { text-align: center; }
 table { width: 100%; }
-
+.header-container { position: absolute; bottom: 5px; width: 100%; margin-left: -1.25rem; }
+.panel-text {
+    font-weight: 100;
+    font-size: 2em;
+    text-align: center;
+    min-height: 110px;
+}
+.panel-header {
+    font-weight: bold;
+    text-align: center;
+    font-size: 1.2em !important;
+}
+#calc-tabs {
+    width: 710px;
+    margin: 0 auto;
+}
 // Calc
 /* Basic reset */
 * {
@@ -48,8 +121,7 @@ html {
 /* Using box shadows to create 3D effects */
 #calculator {
     width: 325px;
-    height: auto;
-    
+    height: auto;    
     margin: 100px auto;
     padding: 20px 20px 9px;
     
@@ -169,4 +241,84 @@ html {
 .top span.clear:active {
     top: 4px;
     box-shadow: 0px 0px #d3545d;
+}
+
+// one rep max calc
+#rep-max {
+    background: #efefef;
+    position: relative;
+}
+label {
+    font-size: 0.5em;
+    font-weight: bold;
+    width: 50%;
+}
+label, input[type="text"] {
+    display: block;
+}
+#lean input[type="text"], #oneRepMax input[type="text"], #bmi input[type="text"], #protein input[type="text"]{
+    width: 50%;
+}
+#lean .button, #lean-form, #oneRepMax .button, #bmi .button, #oneRepMax, #protein-form, #protein-form .button,  #bmi form{
+    margin-bottom: 0;
+}
+#protein, #rep-max, #bmi, #lean {
+    border-radius: 3px; 
+    box-shadow: 0px 4px #009de4, 0px 10px 15px rgba(0, 0, 0, 0.2);
+    background: #f9f9f9;
+}
+#oneRepMax .button, #bmi .button, #protein .button, #lean .button{
+    box-shadow: 0px 4px #027DA6;
+    -webkit-transition: background box-shadow 0.2s;
+    transition: background box-shadow 0.2s;
+    width: 50%;
+    padding: 7px 0;
+}
+#oneRepMax .button:hover, #bmi .button:hover, #lean .button:hover, #protein .button:hover{
+    box-shadow: 0px 4px #034D65;
+}
+input[type="submit"] {
+    border: 0;
+    text-decoration: none;
+    color: white;
+    width: 
+}
+#result-large {
+    font-weight: bold;
+    font-size: 3em;
+    position: absolute;
+    top: 50%;
+    margin-top: -35px;
+    right: 15%;
+    color: #eb9628;
+}
+#result-medium {
+    font-weight: bold;
+    font-size: 3em;
+    position: absolute;
+    top: 50%;
+    margin-top: -35px;
+    right: 9%;
+    color: #eb9628;
+}
+#result-small {
+    font-weight: bold;
+    font-size: 3em;
+    position: absolute;
+    top: 50%;
+    margin-top: -35px;
+    right: 10%;
+    color: #eb9628;
+}
+#protein-form #result-small, #protein-form #result-medium, #protein-form #result-large {
+    margin-top: -24px;
+}
+
+.button-box-shadow {
+    box-shadow: 0px 4px #027DA6;
+    -webkit-transition: background box-shadow 0.2s;
+    transition: background box-shadow 0.2s;
+}
+.button-box-shadow:hover {
+    box-shadow: 0px 4px #034D65;
 }
