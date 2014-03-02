@@ -3,12 +3,9 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>FitnessManager</title>
+    <title>Bill Cosby | FitnessManager</title>
     <link rel="stylesheet" href="css/foundation.css" />
     <link rel="stylesheet" href="css/custom.css" />
-    <link rel="stylesheet" href="hist.css" />
-    <script src="http://d3js.org/d3.v3.min.js"></script>
-    <script src="hist.js"></script>
     <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
     <script src="js/vendor/modernizr.js"></script>
     <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
@@ -95,68 +92,6 @@
         </div>
  	</form>  
   </div>
-  
-    <!-- <script> -->
-    <!--   if (window.XMLHttpRequest) -->
-    <!--   {// code for IE7+, Firefox, Chrome, Opera, Safari -->
-    <!--   xmlhttp=new XMLHttpRequest(); -->
-    <!--   } -->
-    <!--   else -->
-    <!--   {// code for IE6, IE5 -->
-    <!--   xmlhttp=new ActiveXObject("Microsoft.XMLHTTP"); -->
-    <!--   } -->
-    <!--   //xmlhttp.open("GET","cd_catalog.xml",false); -->
-    <!--   xmlhttp.open("GET","http://peirongli.dreamhosters.com/WiXdata/cd_catalog.xml",false); -->
-
-    <!--   xmlhttp.send(); -->
-    <!--   xmlDoc=xmlhttp.responseXML;  -->
-
-    <!--   document.write("<table border='1'>"); -->
-    <!-- 	var x=xmlDoc.getElementsByTagName("CD"); -->
-    <!-- 	for (i=0;i<x.length;i++) -->
-    <!-- 		     {  -->
-    <!-- 		     document.write("<tr><td>"); -->
-    <!-- 		     document.write(x[i].getElementsByTagName("ARTIST")[0].childNodes[0].nodeValue); -->
-    <!-- 		     document.write("</td><td>"); -->
-    <!-- 		     document.write(x[i].getElementsByTagName("TITLE")[0].childNodes[0].nodeValue); -->
-    <!-- 		     document.write("</td></tr>"); -->
-    <!-- 		     } -->
-    <!-- 		     document.write("</table>"); -->
-    <!-- 		     </script> -->
-
-    <!-- <script> -->
-    <!--   // Check for the various File API support. -->
-    <!--   if (window.File && window.FileReader && window.FileList && window.Blob) { -->
-    <!--   // Great success! All the File APIs are supported. -->
-    <!--   } else { -->
-    <!--   alert('The File APIs are not fully supported in this browser.'); -->
-    <!--   } -->
-    <!--   console.log("abc"); -->
-    <!--   var JSONObject= { -->
-    <!--   "name":"John Johnson", -->
-    <!--   "street":"Oslo West 555",  -->
-    <!--   "age":33, -->
-    <!--   "phone":"555 1234567"};	 -->
-    <!--   var json = JSON.stringify(JSONObject); -->
-    <!--   var encoded = btoa(json); -->
-    <!--   var xhr = new XMLHttpRequest(); -->
-    <!--   console.log("abc"); -->
-    <!--   xhr.open('POST','http://peirongli.dreamhosters.com/WiXdata/myServerPage.php',true); -->
-    <!--   console.log("abc"); -->
-    <!--   //	xhr.open('POST','http://peirongli.dreamhosters.com/WiXdata/myServerPage.php',true); -->
-    <!--   xhr.setRequestHeader('Content-type','application/x-www-form-urlencoded'); -->
-    <!--   xhr.send('json=' + encoded); -->
-    <!--   console.log("xyz"); -->
-    
-    <!--   /* -->
-    <!--   var fso, fileHandle; -->
-    <!--   fso = new ActiveXObject("Scripting.FileSystemObject"); -->
-    <!--   fileHandle = fso.CreateTextFile("testWrite", true); -->
-    <!--   var data = "test data"; -->
-    <!--   fileHandle.write(data); -->
-    <!--   fileHandle.close(); -->
-    <!--   */ -->
-    <!-- </script> -->
     <div class="off-canvas-wrap">
       <div class="inner-wrap">
 	<nav class="tab-bar show-for-small-only">
@@ -217,7 +152,7 @@
 		<li class="has-form">
 		  <!--- <a href="#" class="button">Add client2</a> --->
 		  <div id="yourDiv2">
-			<input type="button" name="button"  value="Add New Client" onClick="display1(this)">
+			<input class="button" type="button" name="button"  value="Add Client" onClick="display1(this)">
 			</div>
 <!---
 <input type="checkbox" onclick="display1(this)">Add more users</input>
@@ -246,53 +181,39 @@
 	  <div id="main-content" class="tabs-content vertical">
 	    <div class="content active" id="panel1a">
 	      <div class="row">
-		<a href="#" data-dropdown="drop" class="button button-box-shadow tiny radius dropdown">Billy Paneda</a><br>
+		<a href="#" data-dropdown="drop" class="button button-box-shadow tiny radius dropdown">Bill Cosby</a><br>
 		<ul id="drop" data-dropdown-content class="f-dropdown">
-		  <li><a href="#">Joe Schmo</a></li>
-		  <li><a href="#">Bill Cosby</a></li>
+		  <li><a href="/WiX/FitnessManager2/user1.html">Joe Schmo</a></li>
+		  <li><a href="/WiX/FitnessManager2/index2.html">Billy Paneda</a></li>
 		  <li><a href="#">Jane Simpson</a></li>
 		</ul>
 		<div class="row" data-equalizer>
 		  <div class="large-3 columns panel panel-text" data-equalizer-watch>
 		    <div class="header-container">
-		      <h4 class="panel-header">30-min Jog</h4>
+		      <h4 class="panel-header">CrossFit</h4>
 		    </div>
 		    Today
 		  </div>
 		  <div class="large-3 columns panel panel-text" data-equalizer-watch>
 		    <div class="header-container">
-		      <h4 class="panel-header">100 Push-ups</h4>
+		      <h4 class="panel-header">20 Squats</h4>
 		    </div>
 		    Challenge
 		  </div>
 		  <div class="large-3 columns panel panel-text" data-equalizer-watch>
 		    <div class="header-container">
-		      <h4 class="panel-header">5</h4>
+		      <h4 class="panel-header">2.3lb</h4>
 		    </div>
-		    Weight-lost
+		    Muscle-Gained
 		  </div>
 		  <div class="large-3 columns panel panel-text" data-equalizer-watch>
 		    <div class="header-container">
-		      <h4 class="panel-header">Just Do It</h4>
+		      <h4 class="panel-header">Summer's Coming</h4>
 		    </div>
 		    Motivation
 		  </div>
 		</div>
 	      </div>
-	      
-	      
-		 	<!---  Histogram starts --->
-           	<div>
-          		<h1> Hoooo </h1>
-				<div id="histhere">
-				<label class="histlabel"><input type="checkbox" id="input1" class="awesome"> Sort values2</label>
-				</div>
-				</iframe>
-
-
-           	</div>
-           	<!---  Histogram ends --->
-	      
               <div class="row">
 		<div class="small-12 columns">
 		  <h4 id="progress-bars">Progress Bars</h4>
@@ -529,9 +450,9 @@
 			<input id="body-fat" type="text" name="body-fat">
 			<input class="button radius" type="submit" value="Calculate">
 		      </form>
-		      <div id="result-large" class="show-for-large-up">1115</div>
-		      <div id="result-medium" class="show-for-medium-only">1115</div>
-		      <div id="result-small" class="show-for-small-only">1115</div>
+		      <div id="result-large" class="show-for-large-up">121lb</div>
+		      <div id="result-medium" class="show-for-medium-only">121lb</div>
+		      <div id="result-small" class="show-for-small-only">121lb</div>
 		    </div>
 		  </div>
 		  <div class="content" id="panel2-2">
@@ -542,9 +463,9 @@
 			<input id="weight-protein" type="text" name="weight">
 			<input class="button radius" type="submit" value="Calculate">
 		      </form>
-		      <div id="result-large" class="show-for-large-up">1115</div>
-		      <div id="result-medium" class="show-for-medium-only">1115</div>
-		      <div id="result-small" class="show-for-small-only">1115</div>
+		      <div id="result-large" class="show-for-large-up">102g</div>
+		      <div id="result-medium" class="show-for-medium-only">102g</div>
+		      <div id="result-small" class="show-for-small-only">102g</div>
 		    </div>
 		  </div>
 		  <div class="content" id="panel2-3">
@@ -557,9 +478,9 @@
 			<input id="height" type="text" name="height">
 			<input class="button radius" type="submit" value="Calculate">
 		      </form>
-		      <div id="result-large" class="show-for-large-up">1115</div>
-		      <div id="result-medium" class="show-for-medium-only">1115</div>
-		      <div id="result-small" class="show-for-small-only">1115</div>
+		      <div id="result-large" class="show-for-large-up">20.5</div>
+		      <div id="result-medium" class="show-for-medium-only">20.5</div>
+		      <div id="result-small" class="show-for-small-only">20.5</div>
 		    </div>
 		    <table>
 		      <tbody><tr><td><b><abbr title="Body Mass Index">BMI</abbr></b></td><td><b>Classification</b></td></tr>
@@ -579,9 +500,9 @@
 			<input id="reps" type="text" name="reps">
 			<input class="button radius" type="submit" value="Calculate">
 		      </form>
-		      <div id="result-large" class="show-for-large-up"></div>
-		      <div id="result-medium" class="show-for-medium-only"></div>
-		      <div id="result-small" class="show-for-small-only"></div>
+		      <div id="result-large" class="show-for-large-up">N/A</div>
+		      <div id="result-medium" class="show-for-medium-only">N/A</div>
+		      <div id="result-small" class="show-for-small-only">N/A</div>
 		    </div>
 		  </div>
 		</div>

@@ -997,3 +997,78 @@ log : Array
 
 
 Success Login
+test1 == 
+log : Array
+(
+    [0] => 1
+    [id] => 1
+    [1] => Patrick
+    [username] => Patrick
+    [2] => the4Done
+    [password] => the4Done
+    [3] => 1
+    [Role] => 1
+)
+
+
+Success Login
+test1 == 
+log : Array
+(
+    [0] => 1
+    [id] => 1
+    [1] => Patrick
+    [username] => Patrick
+    [2] => the4Done
+    [password] => the4Done
+    [3] => 1
+    [Role] => 1
+)
+
+
+Success Login
+test1 == 
+log : Array
+(
+    [0] => 1
+    [id] => 1
+    [1] => Patrick
+    [username] => Patrick
+    [2] => the4Done
+    [password] => the4Done
+    [3] => 1
+    [Role] => 1
+)
+
+
+Success Login
+test1 == 
+log : Array
+(
+    [0] => 1
+    [id] => 1
+    [1] => Patrick
+    [username] => Patrick
+    [2] => the4Done
+    [password] => the4Done
+    [3] => 1
+    [Role] => 1
+)
+
+
+Success Login
+test1 == 
+log : Array
+(
+    [0] => 1
+    [id] => 1
+    [1] => Patrick
+    [username] => Patrick
+    [2] => the4Done
+    [password] => the4Done
+    [3] => 1
+    [Role] => 1
+)
+
+
+Success Login

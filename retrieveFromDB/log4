@@ -718,3 +718,723 @@ log trainee: Array
     [Height] => 180
 )
 
+log trainee: Array
+(
+    [0] => 2
+    [ID] => 2
+    [1] => Daming
+    [username] => Daming
+    [2] => Daming
+    [FirstName] => Daming
+    [3] => Lu
+    [LastName] => Lu
+    [4] => 29
+    [Age] => 29
+    [5] => http://imgur.com/SvElSbt
+    [ImgURL] => http://imgur.com/SvElSbt
+    [6] => 4
+    [D1] => 4
+    [7] => 7
+    [D2] => 7
+    [8] => 2
+    [D3] => 2
+    [9] => 2
+    [D4] => 2
+    [10] => 13
+    [D5] => 13
+    [11] => 0
+    [D6] => 0
+    [12] => 4
+    [D7] => 4
+    [13] => 2100
+    [Calories_Burned] => 2100
+    [14] => 75
+    [Weight] => 75
+    [15] => 178
+    [Height] => 178
+)
+
+log trainee: Array
+(
+    [0] => 3
+    [ID] => 3
+    [1] => WiXor
+    [username] => WiXor
+    [2] => WiXor
+    [FirstName] => WiXor
+    [3] => Hack
+    [LastName] => Hack
+    [4] => 33
+    [Age] => 33
+    [5] => http://imgur.com/ZReJnQ6
+    [ImgURL] => http://imgur.com/ZReJnQ6
+    [6] => 24
+    [D1] => 24
+    [7] => 27
+    [D2] => 27
+    [8] => 12
+    [D3] => 12
+    [9] => 2
+    [D4] => 2
+    [10] => 13
+    [D5] => 13
+    [11] => 10
+    [D6] => 10
+    [12] => 14
+    [D7] => 14
+    [13] => 4500
+    [Calories_Burned] => 4500
+    [14] => 77
+    [Weight] => 77
+    [15] => 180
+    [Height] => 180
+)
+
+log trainee: Array
+(
+    [0] => 4
+    [ID] => 4
+    [1] => 123
+    [username] => 123
+    [2] => 
+    [FirstName] => 
+    [3] => 
+    [LastName] => 
+    [4] => 123
+    [Age] => 123
+    [5] => http://imgur.com/HILNVqB
+    [ImgURL] => http://imgur.com/HILNVqB
+    [6] => 4
+    [D1] => 4
+    [7] => 7
+    [D2] => 7
+    [8] => 2
+    [D3] => 2
+    [9] => 2
+    [D4] => 2
+    [10] => 13
+    [D5] => 13
+    [11] => 0
+    [D6] => 0
+    [12] => 4
+    [D7] => 4
+    [13] => 246
+    [Calories_Burned] => 246
+    [14] => 123
+    [Weight] => 123
+    [15] => 123
+    [Height] => 123
+)
+
+log trainee: Array
+(
+    [0] => 5
+    [ID] => 5
+    [1] => asd123
+    [username] => asd123
+    [2] => 
+    [FirstName] => 
+    [3] => 
+    [LastName] => 
+    [4] => 44
+    [Age] => 44
+    [5] => http://imgur.com/HILNVqB
+    [ImgURL] => http://imgur.com/HILNVqB
+    [6] => 4
+    [D1] => 4
+    [7] => 7
+    [D2] => 7
+    [8] => 2
+    [D3] => 2
+    [9] => 2
+    [D4] => 2
+    [10] => 13
+    [D5] => 13
+    [11] => 0
+    [D6] => 0
+    [12] => 4
+    [D7] => 4
+    [13] => 252
+    [Calories_Burned] => 252
+    [14] => 121
+    [Weight] => 121
+    [15] => 131
+    [Height] => 131
+)
+
+log trainee: Array
+(
+    [0] => 2
+    [ID] => 2
+    [1] => Daming
+    [username] => Daming
+    [2] => Daming
+    [FirstName] => Daming
+    [3] => Lu
+    [LastName] => Lu
+    [4] => 29
+    [Age] => 29
+    [5] => http://imgur.com/SvElSbt
+    [ImgURL] => http://imgur.com/SvElSbt
+    [6] => 4
+    [D1] => 4
+    [7] => 7
+    [D2] => 7
+    [8] => 2
+    [D3] => 2
+    [9] => 2
+    [D4] => 2
+    [10] => 13
+    [D5] => 13
+    [11] => 0
+    [D6] => 0
+    [12] => 4
+    [D7] => 4
+    [13] => 2100
+    [Calories_Burned] => 2100
+    [14] => 75
+    [Weight] => 75
+    [15] => 178
+    [Height] => 178
+)
+
+log trainee: Array
+(
+    [0] => 3
+    [ID] => 3
+    [1] => WiXor
+    [username] => WiXor
+    [2] => WiXor
+    [FirstName] => WiXor
+    [3] => Hack
+    [LastName] => Hack
+    [4] => 33
+    [Age] => 33
+    [5] => http://imgur.com/ZReJnQ6
+    [ImgURL] => http://imgur.com/ZReJnQ6
+    [6] => 24
+    [D1] => 24
+    [7] => 27
+    [D2] => 27
+    [8] => 12
+    [D3] => 12
+    [9] => 2
+    [D4] => 2
+    [10] => 13
+    [D5] => 13
+    [11] => 10
+    [D6] => 10
+    [12] => 14
+    [D7] => 14
+    [13] => 4500
+    [Calories_Burned] => 4500
+    [14] => 77
+    [Weight] => 77
+    [15] => 180
+    [Height] => 180
+)
+
+log trainee: Array
+(
+    [0] => 4
+    [ID] => 4
+    [1] => 123
+    [username] => 123
+    [2] => 
+    [FirstName] => 
+    [3] => 
+    [LastName] => 
+    [4] => 123
+    [Age] => 123
+    [5] => http://imgur.com/HILNVqB
+    [ImgURL] => http://imgur.com/HILNVqB
+    [6] => 4
+    [D1] => 4
+    [7] => 7
+    [D2] => 7
+    [8] => 2
+    [D3] => 2
+    [9] => 2
+    [D4] => 2
+    [10] => 13
+    [D5] => 13
+    [11] => 0
+    [D6] => 0
+    [12] => 4
+    [D7] => 4
+    [13] => 246
+    [Calories_Burned] => 246
+    [14] => 123
+    [Weight] => 123
+    [15] => 123
+    [Height] => 123
+)
+
+log trainee: Array
+(
+    [0] => 5
+    [ID] => 5
+    [1] => asd123
+    [username] => asd123
+    [2] => 
+    [FirstName] => 
+    [3] => 
+    [LastName] => 
+    [4] => 44
+    [Age] => 44
+    [5] => http://imgur.com/HILNVqB
+    [ImgURL] => http://imgur.com/HILNVqB
+    [6] => 4
+    [D1] => 4
+    [7] => 7
+    [D2] => 7
+    [8] => 2
+    [D3] => 2
+    [9] => 2
+    [D4] => 2
+    [10] => 13
+    [D5] => 13
+    [11] => 0
+    [D6] => 0
+    [12] => 4
+    [D7] => 4
+    [13] => 252
+    [Calories_Burned] => 252
+    [14] => 121
+    [Weight] => 121
+    [15] => 131
+    [Height] => 131
+)
+
+log trainee: Array
+(
+    [0] => 2
+    [ID] => 2
+    [1] => Daming
+    [username] => Daming
+    [2] => Daming
+    [FirstName] => Daming
+    [3] => Lu
+    [LastName] => Lu
+    [4] => 29
+    [Age] => 29
+    [5] => http://imgur.com/SvElSbt
+    [ImgURL] => http://imgur.com/SvElSbt
+    [6] => 4
+    [D1] => 4
+    [7] => 7
+    [D2] => 7
+    [8] => 2
+    [D3] => 2
+    [9] => 2
+    [D4] => 2
+    [10] => 13
+    [D5] => 13
+    [11] => 0
+    [D6] => 0
+    [12] => 4
+    [D7] => 4
+    [13] => 2100
+    [Calories_Burned] => 2100
+    [14] => 75
+    [Weight] => 75
+    [15] => 178
+    [Height] => 178
+)
+
+log trainee: Array
+(
+    [0] => 3
+    [ID] => 3
+    [1] => WiXor
+    [username] => WiXor
+    [2] => WiXor
+    [FirstName] => WiXor
+    [3] => Hack
+    [LastName] => Hack
+    [4] => 33
+    [Age] => 33
+    [5] => http://imgur.com/ZReJnQ6
+    [ImgURL] => http://imgur.com/ZReJnQ6
+    [6] => 24
+    [D1] => 24
+    [7] => 27
+    [D2] => 27
+    [8] => 12
+    [D3] => 12
+    [9] => 2
+    [D4] => 2
+    [10] => 13
+    [D5] => 13
+    [11] => 10
+    [D6] => 10
+    [12] => 14
+    [D7] => 14
+    [13] => 4500
+    [Calories_Burned] => 4500
+    [14] => 77
+    [Weight] => 77
+    [15] => 180
+    [Height] => 180
+)
+
+log trainee: Array
+(
+    [0] => 4
+    [ID] => 4
+    [1] => JohnSmith
+    [username] => JohnSmith
+    [2] => 
+    [FirstName] => 
+    [3] => 
+    [LastName] => 
+    [4] => 123
+    [Age] => 123
+    [5] => http://imgur.com/HILNVqB
+    [ImgURL] => http://imgur.com/HILNVqB
+    [6] => 4
+    [D1] => 4
+    [7] => 7
+    [D2] => 7
+    [8] => 2
+    [D3] => 2
+    [9] => 2
+    [D4] => 2
+    [10] => 13
+    [D5] => 13
+    [11] => 0
+    [D6] => 0
+    [12] => 4
+    [D7] => 4
+    [13] => 246
+    [Calories_Burned] => 246
+    [14] => 123
+    [Weight] => 123
+    [15] => 123
+    [Height] => 123
+)
+
+log trainee: Array
+(
+    [0] => 5
+    [ID] => 5
+    [1] => HappyHacker
+    [username] => HappyHacker
+    [2] => 
+    [FirstName] => 
+    [3] => 
+    [LastName] => 
+    [4] => 44
+    [Age] => 44
+    [5] => http://imgur.com/HILNVqB
+    [ImgURL] => http://imgur.com/HILNVqB
+    [6] => 4
+    [D1] => 4
+    [7] => 7
+    [D2] => 7
+    [8] => 2
+    [D3] => 2
+    [9] => 2
+    [D4] => 2
+    [10] => 13
+    [D5] => 13
+    [11] => 0
+    [D6] => 0
+    [12] => 4
+    [D7] => 4
+    [13] => 252
+    [Calories_Burned] => 252
+    [14] => 121
+    [Weight] => 121
+    [15] => 131
+    [Height] => 131
+)
+
+log trainee: Array
+(
+    [0] => 2
+    [ID] => 2
+    [1] => Daming
+    [username] => Daming
+    [2] => Daming
+    [FirstName] => Daming
+    [3] => Lu
+    [LastName] => Lu
+    [4] => 29
+    [Age] => 29
+    [5] => http://imgur.com/SvElSbt
+    [ImgURL] => http://imgur.com/SvElSbt
+    [6] => 4
+    [D1] => 4
+    [7] => 7
+    [D2] => 7
+    [8] => 2
+    [D3] => 2
+    [9] => 2
+    [D4] => 2
+    [10] => 13
+    [D5] => 13
+    [11] => 0
+    [D6] => 0
+    [12] => 4
+    [D7] => 4
+    [13] => 2100
+    [Calories_Burned] => 2100
+    [14] => 75
+    [Weight] => 75
+    [15] => 178
+    [Height] => 178
+)
+
+log trainee: Array
+(
+    [0] => 3
+    [ID] => 3
+    [1] => WiXor
+    [username] => WiXor
+    [2] => WiXor
+    [FirstName] => WiXor
+    [3] => Hack
+    [LastName] => Hack
+    [4] => 33
+    [Age] => 33
+    [5] => http://imgur.com/ZReJnQ6
+    [ImgURL] => http://imgur.com/ZReJnQ6
+    [6] => 24
+    [D1] => 24
+    [7] => 27
+    [D2] => 27
+    [8] => 12
+    [D3] => 12
+    [9] => 2
+    [D4] => 2
+    [10] => 13
+    [D5] => 13
+    [11] => 10
+    [D6] => 10
+    [12] => 14
+    [D7] => 14
+    [13] => 4500
+    [Calories_Burned] => 4500
+    [14] => 77
+    [Weight] => 77
+    [15] => 180
+    [Height] => 180
+)
+
+log trainee: Array
+(
+    [0] => 4
+    [ID] => 4
+    [1] => JohnSmith
+    [username] => JohnSmith
+    [2] => 
+    [FirstName] => 
+    [3] => 
+    [LastName] => 
+    [4] => 123
+    [Age] => 123
+    [5] => http://imgur.com/HILNVqB
+    [ImgURL] => http://imgur.com/HILNVqB
+    [6] => 4
+    [D1] => 4
+    [7] => 7
+    [D2] => 7
+    [8] => 2
+    [D3] => 2
+    [9] => 2
+    [D4] => 2
+    [10] => 13
+    [D5] => 13
+    [11] => 0
+    [D6] => 0
+    [12] => 4
+    [D7] => 4
+    [13] => 246
+    [Calories_Burned] => 246
+    [14] => 123
+    [Weight] => 123
+    [15] => 123
+    [Height] => 123
+)
+
+log trainee: Array
+(
+    [0] => 5
+    [ID] => 5
+    [1] => HappyHacker
+    [username] => HappyHacker
+    [2] => 
+    [FirstName] => 
+    [3] => 
+    [LastName] => 
+    [4] => 44
+    [Age] => 44
+    [5] => http://imgur.com/HILNVqB
+    [ImgURL] => http://imgur.com/HILNVqB
+    [6] => 4
+    [D1] => 4
+    [7] => 7
+    [D2] => 7
+    [8] => 2
+    [D3] => 2
+    [9] => 2
+    [D4] => 2
+    [10] => 13
+    [D5] => 13
+    [11] => 0
+    [D6] => 0
+    [12] => 4
+    [D7] => 4
+    [13] => 252
+    [Calories_Burned] => 252
+    [14] => 121
+    [Weight] => 121
+    [15] => 131
+    [Height] => 131
+)
+
+log trainee: Array
+(
+    [0] => 2
+    [ID] => 2
+    [1] => Daming
+    [username] => Daming
+    [2] => Daming
+    [FirstName] => Daming
+    [3] => Lu
+    [LastName] => Lu
+    [4] => 29
+    [Age] => 29
+    [5] => http://imgur.com/SvElSbt
+    [ImgURL] => http://imgur.com/SvElSbt
+    [6] => 4
+    [D1] => 4
+    [7] => 7
+    [D2] => 7
+    [8] => 2
+    [D3] => 2
+    [9] => 2
+    [D4] => 2
+    [10] => 13
+    [D5] => 13
+    [11] => 0
+    [D6] => 0
+    [12] => 4
+    [D7] => 4
+    [13] => 2100
+    [Calories_Burned] => 2100
+    [14] => 75
+    [Weight] => 75
+    [15] => 178
+    [Height] => 178
+)
+
+log trainee: Array
+(
+    [0] => 3
+    [ID] => 3
+    [1] => WiXor
+    [username] => WiXor
+    [2] => WiXor
+    [FirstName] => WiXor
+    [3] => Hack
+    [LastName] => Hack
+    [4] => 33
+    [Age] => 33
+    [5] => http://imgur.com/ZReJnQ6
+    [ImgURL] => http://imgur.com/ZReJnQ6
+    [6] => 24
+    [D1] => 24
+    [7] => 27
+    [D2] => 27
+    [8] => 12
+    [D3] => 12
+    [9] => 2
+    [D4] => 2
+    [10] => 13
+    [D5] => 13
+    [11] => 10
+    [D6] => 10
+    [12] => 14
+    [D7] => 14
+    [13] => 4500
+    [Calories_Burned] => 4500
+    [14] => 77
+    [Weight] => 77
+    [15] => 180
+    [Height] => 180
+)
+
+log trainee: Array
+(
+    [0] => 4
+    [ID] => 4
+    [1] => JohnSmith
+    [username] => JohnSmith
+    [2] => 
+    [FirstName] => 
+    [3] => 
+    [LastName] => 
+    [4] => 123
+    [Age] => 123
+    [5] => http://imgur.com/HILNVqB
+    [ImgURL] => http://imgur.com/HILNVqB
+    [6] => 4
+    [D1] => 4
+    [7] => 7
+    [D2] => 7
+    [8] => 2
+    [D3] => 2
+    [9] => 2
+    [D4] => 2
+    [10] => 13
+    [D5] => 13
+    [11] => 0
+    [D6] => 0
+    [12] => 4
+    [D7] => 4
+    [13] => 246
+    [Calories_Burned] => 246
+    [14] => 123
+    [Weight] => 123
+    [15] => 123
+    [Height] => 123
+)
+
+log trainee: Array
+(
+    [0] => 5
+    [ID] => 5
+    [1] => HappyHacker
+    [username] => HappyHacker
+    [2] => 
+    [FirstName] => 
+    [3] => 
+    [LastName] => 
+    [4] => 44
+    [Age] => 44
+    [5] => http://imgur.com/HILNVqB
+    [ImgURL] => http://imgur.com/HILNVqB
+    [6] => 4
+    [D1] => 4
+    [7] => 7
+    [D2] => 7
+    [8] => 2
+    [D3] => 2
+    [9] => 2
+    [D4] => 2
+    [10] => 13
+    [D5] => 13
+    [11] => 0
+    [D6] => 0
+    [12] => 4
+    [D7] => 4
+    [13] => 252
+    [Calories_Burned] => 252
+    [14] => 121
+    [Weight] => 121
+    [15] => 131
+    [Height] => 131
+)
+

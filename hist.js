@@ -1,77 +1,4 @@
-<!DOCTYPE html>
-<meta charset="utf-8">
 
-<?php
-
-echo "haha";
-
-?>
-<style>
-
-body {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  position: relative;
-  width: 960px;
-}
-
-.axis text {
-  font: 10px sans-serif;
-}
-
-.axis path,
-.axis line {
-  fill: none;
-  stroke: #000;
-  shape-rendering: crispEdges;
-}
-
-.bar {
-  fill: steelblue;
-  fill-opacity: .9;
-}
-
-.x.axis path {
-  display: none;
-}
-
-label {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-}
-
-</style>
-<label><input type="checkbox" id="input1" class="awesome"> Sort values2</label>
-
-<script src="http://d3js.org/d3.v3.min.js"></script>
-
-
-<script>
-console.log("hey");
-document.write("Hello World!")
-
-function getSearchParameters() {
-      var prmstr = window.location.search.substr(1);
-      return prmstr != null && prmstr != "" ? transformToAssocArray(prmstr) : {};
-}
-
-function transformToAssocArray( prmstr ) {
-    var params = {};
-    var prmarr = prmstr.split("&");
-    for ( var i = 0; i < prmarr.length; i++) {
-        var tmparr = prmarr[i].split("=");
-        params[tmparr[0]] = tmparr[1];
-    }
-    return params;
-}
-
-var params = getSearchParameters();
-console.log('print object: ' + JSON.stringify(params));
-
-console.log(params+"\n!");
-</script>
-
-<script>
 
 var margin = {top: 20, right: 20, bottom: 30, left: 40},
     width = 960 - margin.left - margin.right,
@@ -167,4 +94,3 @@ d3.tsv("data_Miles7days.tsv", function(error, data) {
   }
 });
 
-</script>

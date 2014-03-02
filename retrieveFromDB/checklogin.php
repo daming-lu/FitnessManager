@@ -102,7 +102,15 @@ while($row = mysqli_fetch_array($result))
 		// get this Trainer's Trainee List
 		file_put_contents($His_Trainees,"ID\tusername\tFirstName\tLastName\tAge\tD1\tD2\tD3\tD4\tD5\tD6\tD7\tCalories_Burned\tWeight\tHeight\n",LOCK_EX);		
 		
-		$resultTrainees = mysqli_query($con,"SELECT * from Trainees WHERE Trainees.ID in (SELECT Trainee_ID from Xref WHERE Trainer_ID = 1)");
+		
+// for Hist gram
+file_put_contents("/home/damlu/peirongli.dreamhosters.com/WiX/FitnessManager2/data_Miles7days.tsv", 
+"letter\tfrequency\n",LOCK_EX);
+
+		
+		
+		//$resultTrainees = mysqli_query($con,"SELECT * from Trainees WHERE Trainees.ID in (SELECT Trainee_ID from Xref WHERE Trainer_ID = 1)");
+		$resultTrainees = mysqli_query($con,"SELECT * from Trainees");
 		while($rowTrainee = mysqli_fetch_array($resultTrainees)){
 			//echo "heeeee";
 			//file_put_contents($His_Trainees, "log trainee: ".print_r($rowTrainee,true)."\n",LOCK_EX | FILE_APPEND);
@@ -115,7 +123,15 @@ while($row = mysqli_fetch_array($result))
 				} else {
 					file_put_contents($His_Trainees,"\t",LOCK_EX | FILE_APPEND);
 				}
-			}		
+			}	
+			
+			$histName = $rowTrainee['username'];
+			$histCalories = $rowTrainee['Calories_Burned'];
+			// for Hist gram
+			file_put_contents(
+			"/home/damlu/peirongli.dreamhosters.com/WiX/FitnessManager2/data_Miles7days.tsv", 
+			"$histName\t$histCalories\n",LOCK_EX | FILE_APPEND);
+	
 		}		
 		
 	}

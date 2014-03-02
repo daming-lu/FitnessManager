@@ -1,0 +1,336 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Daming| FitnessManager</title>
+    <link rel="stylesheet" href="css/foundation.css" />
+    <link rel="stylesheet" href="css/custom.css" />
+    <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    <script src="js/vendor/modernizr.js"></script>
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script type='text/javascript'>
+    // this is the id of the form
+	$("#formoid").submit(function(event) {
+
+      /* stop form from submitting normally */
+      event.preventDefault();
+
+      /* get some values from elements on the page: */
+      var $form = $( this ),
+          url = $form.attr( 'action' );
+
+      /* Send the data using post */
+      var posting = $.post( url, { name: $('#name').val(), name2: $('#name2').val() } );
+
+      /* Put the results in a div */
+      posting.done(function( data ) {
+        alert('success');
+      });
+    });
+     
+     
+     var $showAddClientForm = false;
+     
+    function display1(e){
+        document.getElementById("client_FirstName").defaultValue="Goofy";
+
+    
+    	console.log("display1");
+    	$showAddClientForm = true;
+    	document.getElementById('yourDiv').style.display = 'block';
+    	document.getElementById('yourDiv2').style.display = 'none';
+    	/*
+		if (e.checked)
+			document.getElementById('yourDiv').style.display = 'block';
+		else
+			document.getElementById('yourDiv').style.display = 'none';
+		*/
+	}
+	function display2(e){
+    	console.log("display2");
+    	// http://imgur.com/HILNVqB
+	}
+    
+
+    
+    </script>        
+  </head>
+  <body>
+  <div id="yourDiv" style="display:none">
+   	<form id="formoid" action="http://peirongli.dreamhosters.com/WiX/FitnessManager2/retrieveFromDB/addClient.php" title="" method="post">
+        <div>
+            <label class="title">First Name</label>
+            <input type="text" id="client_FirstName" name="FirstName" >
+        </div>
+        <div>
+            <label class="title">Last Name</label>
+            <input type="text"  name="LastName" >
+        </div>
+        <div>
+            <label class="title">Username</label>
+            <input type="text"  name="Username" >            
+        </div>   
+        <div>
+            <label class="title">Age</label>
+            <input type="text"  name="Age" >            
+        </div>     
+        <div>
+            <label class="title">ImgURL</label>
+            <input type="text"  name="ImgURL" >            
+        </div>   
+        <div>
+            <label class="title">Weight</label>
+            <input type="text"  name="Weight1" >            
+        </div>  
+        <div>
+            <label class="title">Height</label>
+            <input type="text"  name="Height1" >            
+        </div>                                          
+        <div>
+            <input type="submit" id="submitButton"  name="submitButton" value="Submit">
+        </div>
+ 	</form>  
+  </div>
+    <div class="off-canvas-wrap">
+      <div class="inner-wrap">
+	<nav class="tab-bar show-for-small-only">
+	  <section class="left-small">
+            <a class="left-off-canvas-toggle menu-icon" ><span></span></a>
+	  </section>
+
+	  <section class="middle tab-bar-section">
+            <h1 class="title">Joe's Personal Training</h1>
+	  </section>
+	</nav>
+
+	<aside class="left-off-canvas-menu">
+	  <ul class="off-canvas-list">
+	    <li class="has-form give-me-space">
+	      <a href="#" class="button" onClick="display1(this)">Add client</a>
+
+	    </li>
+            <li><label>Links</label></li>
+	    <li><a href="#panel1a">Dashboard</a></li>
+	    <li><a href="#panel3a">Calculators</a></li>
+            <li><label>Calculators</label></li>
+	    <li><a href="#panel2-1">BMR</a></li>
+	    <li><a href="#panel2-2">Protein</a></li>
+	    <li><a href="#panel2-3">BMI</a></li>
+	    <li><a href="#panel2-4">1 Rep Max</a></li>
+	  </ul>
+	</aside>
+	<section class="main-section">
+	  <nav class="top-bar hide-for-small-only" data-topbar>
+	    <ul class="title-area">
+	      <li class="name hide-for-small">
+		<h1>
+		  <a href="#">Joe's Personal Training</a>
+		</h1>
+	      </li>
+	      <li class="name-small name show-for-small-only">
+		<h1>
+		  <a href="#">Joe's Personal Training</a>
+		</h1>
+	      </li>
+	      <li class="toggle-topbar menu-icon"><a href="#">Menu</a></li>
+	    </ul>
+	    <section class="top-bar-section">
+	      <ul class="right">
+		<li class="has-form hide-for-medium-up">
+		  <a href="#" class="button">Add client1</a>
+		</li>
+		<li class="has-dropdown hide-for-small-only">
+		  <a href="#">Daming</a>
+		  <ul class="dropdown">
+		    <li><a href="#">Settings</a></li>
+		    <li><a href="#">Logout</a></li>
+		  </ul>
+		</li>
+		<li class="divider"></li>
+		<li class="has-form">
+		  <!--- <a href="#" class="button">Add client2</a> --->
+		  <div id="yourDiv2">
+			<input class="button" type="button" name="button"  value="Check-in" onClick="display1(this)">
+			</div>
+<!---
+<input type="checkbox" onclick="display1(this)">Add more users</input>
+--->
+		</li>
+	      </ul>
+	      <ul class="right show-for-small-only">
+		<li><a href="#panel1a">Dashboard</a></li>
+		<li><a href="#panel3a">Calculators</a></li>
+		<li class="has-dropdown show-for-small-only">
+		  <a href="#">Daming</a>
+		  <ul class="dropdown">
+		    <li><a href="#">Settings</a></li>
+		    <li><a href="#">Logout</a></li>
+		  </ul>
+		</li>
+	      </ul>
+	    </section>
+	  </nav>
+	  <dl id="sidebar" class="tabs vertical hide-for-small-only" data-tab>
+	    <dd class="active entypo-chart-line"><a href="#panel1a">Dashboard</a></dd>
+	    <dd class="entypo-plus-squared"><a href="#panel3a">Calculators</a></dd>
+	  </dl>
+	  <div id="main-content" class="tabs-content vertical">
+	    <div class="content active" id="panel1a">
+	      <div class="row">
+		<a href="#" data-dropdown="drop" class="button button-box-shadow tiny radius dropdown">Joe Schmo</a><br>
+		<ul id="drop" data-dropdown-content class="f-dropdown">
+		  <li><a href="/WiX/FitnessManager2/index.html">Billy Paneda</a></li>
+		  <li><a href="/WiX/FitnessManager2/user2.html">Bill Cosby</a></li>
+		  <li><a href="#">Jane Simpson</a></li>
+		</ul>
+		<div class="row" data-equalizer>
+		  <div class="large-3 columns panel panel-text" data-equalizer-watch>
+		    <div class="header-container">
+		      <h4 class="panel-header">Weight-Lifting</h4>
+		    </div>
+		    Today
+		  </div>
+		  <div class="large-3 columns panel panel-text" data-equalizer-watch>
+		    <div class="header-container">
+		      <h4 class="panel-header">BareFoot Jog</h4>
+		    </div>
+		    Challenge
+		  </div>
+		  <div class="large-3 columns panel panel-text" data-equalizer-watch>
+		    <div class="header-container">
+		      <h4 class="panel-header">142mi</h4>
+		    </div>
+		    Total Miles
+		  </div>
+		  <div class="large-3 columns panel panel-text" data-equalizer-watch>
+		    <div class="header-container">
+		      <h4 class="panel-header">Succeed In Lift</h4>
+		    </div>
+		    Motivation
+		  </div>
+		</div>
+	      </div>
+              <div class="row">
+		<div class="small-12 columns">
+		  <h4 id="progress-bars">Progress Bars</h4>
+		  <div class="progress large-6"><span class="meter" style="width: 40%"></span></div>
+		  <div class="radius progress success large-8"><span class="meter" style="width: 80%"></span></div>
+		  <div class="nice round progress alert large-10"><span class="meter" style="width: 30%"></span></div>
+		  <div class="nice secondary progress"><span class="meter" style="width: 50%"></span></div>
+		</div>
+              </div>
+              <div class="row">
+		<div id="piechart" class="small-12 medium-4 columns">            
+		</div>
+		<div class="small-12 medium-4 columns">
+		  
+		</div>
+		<div class="small-12 medium-4 columns">
+		  
+		</div>
+		<div class="small-12 medium-4 columns">
+		  
+		</div>
+              </div>
+	    </div>
+	    <div class="content" id="panel3a">
+	      <div class="row">
+		<dl id="calc-tabs" class="tabs radius hide-for-medium-down" data-tab>
+		  <dd class="active"><a href="#panel2-1">Basal Metabolic Rate</a></dd>
+		  <dd><a href="#panel2-2">Protein intake</a></dd>
+		  <dd><a href="#panel2-3">Body Mass Index</a></dd>
+		  <dd><a href="#panel2-4">1 Rep Max</a></dd>
+		</dl>
+		<div id="calcs" class="tabs-content">
+		  <div class="content active" id="panel2-1">
+		    <p>Lean Body Mass</p>
+		    <div id="lean" class="panel small-12 medium-6 medium-centered columns">
+		      <form id="lean-form" name="protein" onsubmit="return lean();">
+			<label>Weight(lb):</label>
+			<input id="weight-lean" type="text" name="weight">
+			<label>Body Fat %:</label>
+			<input id="body-fat" type="text" name="body-fat">
+			<input class="button radius" type="submit" value="Calculate">
+		      </form>
+		      <div id="result-large" class="show-for-large-up">121lb</div>
+		      <div id="result-medium" class="show-for-medium-only">121lb</div>
+		      <div id="result-small" class="show-for-small-only">121lb</div>
+		    </div>
+		  </div>
+		  <div class="content" id="panel2-2">
+		    <p>Recommended Protein Intake</p>
+		    <div id="protein" class="panel small-12 medium-6 medium-centered columns">
+		      <form id="protein-form" name="protein" onsubmit="return protein();">
+			<label>Weight(lb):</label>
+			<input id="weight-protein" type="text" name="weight">
+			<input class="button radius" type="submit" value="Calculate">
+		      </form>
+		      <div id="result-large" class="show-for-large-up">102g</div>
+		      <div id="result-medium" class="show-for-medium-only">102g</div>
+		      <div id="result-small" class="show-for-small-only">102g</div>
+		    </div>
+		  </div>
+		  <div class="content" id="panel2-3">
+		    <p>Body Mass Index</p>
+		    <div id="bmi" class="panel small-12 medium-6 medium-centered columns">
+		      <form id="bmi-form" name="bmi" onsubmit="return bmi();">
+			<label>Weight(lb):</label>
+			<input id="weight-bmi" type="text" name="weight">
+			<label>Height(in):</label>
+			<input id="height" type="text" name="height">
+			<input class="button radius" type="submit" value="Calculate">
+		      </form>
+		      <div id="result-large" class="show-for-large-up">20.5</div>
+		      <div id="result-medium" class="show-for-medium-only">20.5</div>
+		      <div id="result-small" class="show-for-small-only">20.5</div>
+		    </div>
+		    <table>
+		      <tbody><tr><td><b><abbr title="Body Mass Index">BMI</abbr></b></td><td><b>Classification</b></td></tr>
+			<tr><td>Less than 18.5</td><td>Underweight</td></tr>
+			<tr><td>From 18.5 to 25</td><td>Normal</td></tr>
+			<tr><td>Greater than 25</td><td>Overweight</td></tr>
+			<tr><td>Greater than 30</td><td>Obese</td></tr>
+		    </tbody></table>
+		  </div>
+		  <div class="content " id="panel2-4">
+		    <p>(Weight x 0.0333 x Reps) + Weight</p>
+		    <div id="rep-max" class="panel small-12 medium-6 medium-centered columns">
+		      <form id="oneRepMax" name="oneRepMax">
+			<label>Weight(lb):</label>
+			<input id="weight-rep" type="text" name="weight">
+			<label>Reps:</label>
+			<input id="reps" type="text" name="reps">
+			<input class="button radius" type="submit" value="Calculate">
+		      </form>
+		      <div id="result-large" class="show-for-large-up">N/A</div>
+		      <div id="result-medium" class="show-for-medium-only">N/A</div>
+		      <div id="result-small" class="show-for-small-only">N/A</div>
+		    </div>
+		  </div>
+		</div>
+	      </div>
+	    </div>
+	    <div class="content" id="panel4a">
+              <p>Panel 4 content goes here.</p>
+	    </div>
+	  </div>
+	</section>
+
+	<a class="exit-off-canvas"></a>
+
+      </div>
+    </div>
+    <div id="fitness-manager-logo">Powered by <a href="#"><img src="images/fm-logo.png"></div>
+     <script src="js/vendor/jquery.js"></script>
+     <script src="js/foundation.min.js"></script>
+     <script src="js/calc.js"></script>
+     <script src="js/oneRepMax.js"></script>
+     <script src="js/prefixfree-1.0.7.js"></script>
+     <script src="js/piechart.js"></script>
+     <script src="js/line-chart.js"></script>
+     <script>
+       $(document).foundation();
+     </script>
+   </body>
+ </html>
