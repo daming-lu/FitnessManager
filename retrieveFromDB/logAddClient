@@ -98,3 +98,17 @@ Array
     [submitButton] => Submit
 )
 
+Here
+POST
+Array
+(
+    [FirstName] => Goofy
+    [LastName] => kjflk
+    [Username] => kjfdlk
+    [Age] => 323
+    [ImgURL] => http://fjkdlj
+    [Weight1] => 123
+    [Height1] => jdklf
+    [submitButton] => Submit
+)
+
