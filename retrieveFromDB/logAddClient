@@ -1,0 +1,28 @@
+Here
+POST
+Array
+(
+    [FirstName] => Goofy
+    [LastName] => 
+    [Username] => 
+    [Age] => 
+    [ImgURL] => 
+    [Weight1] => 
+    [Height1] => 
+    [submitButton] => Submit
+)
+
+Here
+POST
+Array
+(
+    [FirstName] => Goofy
+    [LastName] => fdsf
+    [Username] => fadsf
+    [Age] => 23
+    [ImgURL] => fdasf
+    [Weight1] => 12
+    [Height1] => 2
+    [submitButton] => Submit
+)
+
