@@ -8,8 +8,91 @@
     <link rel="stylesheet" href="css/custom.css" />
     <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
     <script src="js/vendor/modernizr.js"></script>
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script type='text/javascript'>
+    // this is the id of the form
+	$("#formoid").submit(function(event) {
+
+      /* stop form from submitting normally */
+      event.preventDefault();
+
+      /* get some values from elements on the page: */
+      var $form = $( this ),
+          url = $form.attr( 'action' );
+
+      /* Send the data using post */
+      var posting = $.post( url, { name: $('#name').val(), name2: $('#name2').val() } );
+
+      /* Put the results in a div */
+      posting.done(function( data ) {
+        alert('success');
+      });
+    });
+     
+     
+     var $showAddClientForm = false;
+     
+    function display1(e){
+        document.getElementById("client_FirstName").defaultValue="Goofy";
+
+    
+    	console.log("display1");
+    	$showAddClientForm = true;
+    	document.getElementById('yourDiv').style.display = 'block';
+    	document.getElementById('yourDiv2').style.display = 'none';
+    	/*
+		if (e.checked)
+			document.getElementById('yourDiv').style.display = 'block';
+		else
+			document.getElementById('yourDiv').style.display = 'none';
+		*/
+	}
+	function display2(e){
+    	console.log("display2");
+    	// http://imgur.com/HILNVqB
+	}
+    
+
+    
+    </script>        
   </head>
   <body>
+  <div id="yourDiv" style="display:none">
+   	<form id="formoid" action="http://peirongli.dreamhosters.com/WiX/FitnessManager2/retrieveFromDB/addClient.php" title="" method="post">
+        <div>
+            <label class="title">First Name</label>
+            <input type="text" id="client_FirstName" name="FirstName" >
+        </div>
+        <div>
+            <label class="title">Last Name</label>
+            <input type="text"  name="LastName" >
+        </div>
+        <div>
+            <label class="title">Username</label>
+            <input type="text"  name="Username" >            
+        </div>   
+        <div>
+            <label class="title">Age</label>
+            <input type="text"  name="Age" >            
+        </div>     
+        <div>
+            <label class="title">ImgURL</label>
+            <input type="text"  name="ImgURL" >            
+        </div>   
+        <div>
+            <label class="title">Weight</label>
+            <input type="text"  name="Weight1" >            
+        </div>  
+        <div>
+            <label class="title">Height</label>
+            <input type="text"  name="Height1" >            
+        </div>                                          
+        <div>
+            <input type="submit" id="submitButton"  name="submitButton" value="Submit">
+        </div>
+ 	</form>  
+  </div>
+  
     <!-- <script> -->
     <!--   if (window.XMLHttpRequest) -->
     <!--   {// code for IE7+, Firefox, Chrome, Opera, Safari -->
@@ -86,7 +169,8 @@
 	<aside class="left-off-canvas-menu">
 	  <ul class="off-canvas-list">
 	    <li class="has-form give-me-space">
-	      <a href="#" class="button">Add client</a>
+	      <a href="#" class="button" onClick="display1(this)">Add client</a>
+
 	    </li>
             <li><label>Links</label></li>
 	    <li><a href="#panel1a">Dashboard</a></li>
@@ -117,7 +201,7 @@
 	    <section class="top-bar-section">
 	      <ul class="right">
 		<li class="has-form hide-for-medium-up">
-		  <a href="#" class="button">Add client</a>
+		  <a href="#" class="button">Add client1</a>
 		</li>
 		<li class="has-dropdown hide-for-small-only">
 		  <a href="#">Patrick Perey</a>
@@ -128,7 +212,13 @@
 		</li>
 		<li class="divider"></li>
 		<li class="has-form">
-		  <a href="#" class="button">Add client</a>
+		  <!--- <a href="#" class="button">Add client2</a> --->
+		  <div id="yourDiv2">
+			<input type="button" name="button"  value="Add New Client" onClick="display1(this)">
+			</div>
+<!---
+<input type="checkbox" onclick="display1(this)">Add more users</input>
+--->
 		</li>
 	      </ul>
 	      <ul class="right show-for-small-only">
@@ -417,7 +507,7 @@
 		    <div id="lean" class="panel small-12 medium-6 medium-centered columns">
 		      <form id="lean-form" name="protein" onsubmit="return lean();">
 			<label>Weight(lb):</label>
-			<input id="weight" type="text" name="weight">
+			<input id="weight-lean" type="text" name="weight">
 			<label>Body Fat %:</label>
 			<input id="body-fat" type="text" name="body-fat">
 			<input class="button radius" type="submit" value="Calculate">
@@ -432,7 +522,7 @@
 		    <div id="protein" class="panel small-12 medium-6 medium-centered columns">
 		      <form id="protein-form" name="protein" onsubmit="return protein();">
 			<label>Weight(lb):</label>
-			<input id="weight" type="text" name="weight">
+			<input id="weight-protein" type="text" name="weight">
 			<input class="button radius" type="submit" value="Calculate">
 		      </form>
 		      <div id="result-large" class="show-for-large-up">1115</div>
@@ -445,7 +535,7 @@
 		    <div id="bmi" class="panel small-12 medium-6 medium-centered columns">
 		      <form id="bmi-form" name="bmi" onsubmit="return bmi();">
 			<label>Weight(lb):</label>
-			<input id="weight" type="text" name="weight">
+			<input id="weight-bmi" type="text" name="weight">
 			<label>Height(in):</label>
 			<input id="height" type="text" name="height">
 			<input class="button radius" type="submit" value="Calculate">
@@ -467,15 +557,14 @@
 		    <div id="rep-max" class="panel small-12 medium-6 medium-centered columns">
 		      <form id="oneRepMax" name="oneRepMax">
 			<label>Weight(lb):</label>
-			<input id="weightx" type="text" name="weight">
+			<input id="weight-rep" type="text" name="weight">
 			<label>Reps:</label>
 			<input id="reps" type="text" name="reps">
 			<input class="button radius" type="submit" value="Calculate">
 		      </form>
-		      <div id="result"></div>
-		      <div id="result-large" class="show-for-large-up">1115</div>
-		      <div id="result-medium" class="show-for-medium-only">1115</div>
-		      <div id="result-small" class="show-for-small-only">1115</div>
+		      <div id="result-large" class="show-for-large-up"></div>
+		      <div id="result-medium" class="show-for-medium-only"></div>
+		      <div id="result-small" class="show-for-small-only"></div>
 		    </div>
 		  </div>
 		</div>
@@ -491,16 +580,4 @@
 
       </div>
     </div>
-    <div id="fitness-manager-logo">Powered by <a href="#"><img src="images/fm-logo.png"></div>
-    <script src="js/vendor/jquery.js"></script>
-    <script src="js/foundation.min.js"></script>
-    <script src="js/calc.js"></script>
-    <script src="js/oneRepMax.js"></script>
-    <script src="js/prefixfree-1.0.7.js"></script>
-    <script src="js/piechart.js"></script>
-    <script src="js/line-chart.js"></script>
-    <script>
-      $(document).foundation();
-    </script>
-  </body>
-</html>
+    <div id="fitness-manager-logo">Powered by <a href="#"><img src="images/fm-logo.png"></div

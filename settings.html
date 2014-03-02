@@ -40,18 +40,6 @@
 
             <div class="acc-content">
                 <ul class="list">
-                    <li wix-label="Fixed Position:">
-                        <div wix-ctrl="FixedPositionControl"></div>
-                    </li>
-                    <li wix-label="Fonts:">
-                        <div wix-param="myFont" wix-ctrl="FontStylePicker"></div>
-                    </li>
-                    <li wix-label="Language Picker:">
-                        <div wix-model="lang" wix-ctrl="LanguagePicker" wix-tooltip=" {placement:'top', text:'Pick Language'}"></div>
-                    </li>
-                    <li wix-label="Email address:">
-                        <div id= "email" wix-ctrl="Input" wix-options="{ placeholder: 'john@doe.com' }"></div>
-                    </li>
                     <li wix-label="Site Title:">
                       <div wix-model="siteTitle" id= "site-title" wix-ctrl="Input" wix-options="{ placeholder: 'Joes Training' }">
 		      </div>
@@ -61,14 +49,20 @@
         </div>
 
         <div class="acc-pane">
-            <h3>Color Settings: </h3>
+            <h3>Design Settings:</h3>
 
             <div class="acc-content">
                 <ul class="list">
-                    <li wix-label="Text Color:">
-                        <div wix-param="textColor" wix-ctrl="ColorPicker" wix-options="{startWithColor:'color-5'}"></div>
+                    <li wix-label="Title text:">
+                        <div wix-param="titleTextColor" wix-ctrl="ColorPicker" wix-options="{startWithColor:'color-3'}"></div>
                     </li>
-                    <li wix-label="Background Color:">
+                    <li wix-label="Text:">
+                        <div wix-param="textColor" wix-ctrl="ColorPicker" wix-options="{startWithColor:'color-6'}"></div>
+                    </li>
+                    <li wix-label="Title Background">
+                        <div wix-param="backgroundColor" wix-ctrl="ColorPickerWithOpacity" wix-options="{startWithColor:'color-1'}"></div>
+                    </li>
+                    <li wix-label="Background">
                         <div wix-param="backgroundColor" wix-ctrl="ColorPickerWithOpacity" wix-options="{startWithColor:'color-1'}"></div>
                     </li>
                 </ul>

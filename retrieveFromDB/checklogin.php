@@ -42,6 +42,9 @@ $dataFileAbsPath = "/home/damlu/peirongli.dreamhosters.com/WiX/FitnessManager2/d
 
 $con = mysqli_connect("$host", "$username", "$password","$db_name");
 $result = mysqli_query($con,"SELECT * FROM $tbl_name WHERE username='$myusername' and password='$mypassword'");
+
+$rowId = 1;
+
 while($row = mysqli_fetch_array($result))
 {
 	file_put_contents("log1", "log : ".print_r($row,true)."\n",LOCK_EX | FILE_APPEND);
@@ -130,10 +133,17 @@ while($row = mysqli_fetch_array($result))
 // ### 
 
 file_put_contents("log1","\nSuccess Login\n",FILE_APPEND|LOCK_EX);
-//echo "haha";
+
 //header("location:login_success.php");
 //header("location:http://peirongli.dreamhosters.com/WiX/FitnessManager/#");
-header("location: http://peirongli.dreamhosters.com/WiX/FitnessManager2/D3_hist.html?p1=$rowId");
+//header("location: http://peirongli.dreamhosters.com/WiX/FitnessManager2/D3_hist.html?p1=$rowId");
+//header("location: http://peirongli.dreamhosters.com/WiX/FitnessManager2/index.html?p1=$rowId");
+
+if($rowId==1){
+	header("location: http://peirongli.dreamhosters.com/WiX/FitnessManager2/index2.html?p1=$rowId");
+} else {
+	header("location: http://peirongli.dreamhosters.com/WiX/FitnessManager2/widget.html");
+}
 				//http://peirongli.dreamhosters.com/learnD3/
 //echo "success\n";
 

@@ -535,3 +535,465 @@ log : Array
 
 
 Success Login
+test1 == 
+log : Array
+(
+    [0] => 1
+    [id] => 1
+    [1] => Patrick
+    [username] => Patrick
+    [2] => the4Done
+    [password] => the4Done
+    [3] => 1
+    [Role] => 1
+)
+
+
+Success Login
+test1 == 
+log : Array
+(
+    [0] => 2
+    [id] => 2
+    [1] => Daming
+    [username] => Daming
+    [2] => haha
+    [password] => haha
+    [3] => 2
+    [Role] => 2
+)
+
+log trainee: Array
+(
+    [0] => 2
+    [ID] => 2
+    [1] => Daming
+    [username] => Daming
+    [2] => Daming
+    [FirstName] => Daming
+    [3] => Lu
+    [LastName] => Lu
+    [4] => 29
+    [Age] => 29
+    [5] => http://imgur.com/SvElSbt
+    [ImgURL] => http://imgur.com/SvElSbt
+    [6] => 4
+    [D1] => 4
+    [7] => 7
+    [D2] => 7
+    [8] => 2
+    [D3] => 2
+    [9] => 2
+    [D4] => 2
+    [10] => 13
+    [D5] => 13
+    [11] => 0
+    [D6] => 0
+    [12] => 4
+    [D7] => 4
+    [13] => 2100
+    [Calories_Burned] => 2100
+    [14] => 75
+    [Weight] => 75
+    [15] => 178
+    [Height] => 178
+)
+
+
+Success Login
+test1 == 
+log : Array
+(
+    [0] => 2
+    [id] => 2
+    [1] => Daming
+    [username] => Daming
+    [2] => haha
+    [password] => haha
+    [3] => 2
+    [Role] => 2
+)
+
+log trainee: Array
+(
+    [0] => 2
+    [ID] => 2
+    [1] => Daming
+    [username] => Daming
+    [2] => Daming
+    [FirstName] => Daming
+    [3] => Lu
+    [LastName] => Lu
+    [4] => 29
+    [Age] => 29
+    [5] => http://imgur.com/SvElSbt
+    [ImgURL] => http://imgur.com/SvElSbt
+    [6] => 4
+    [D1] => 4
+    [7] => 7
+    [D2] => 7
+    [8] => 2
+    [D3] => 2
+    [9] => 2
+    [D4] => 2
+    [10] => 13
+    [D5] => 13
+    [11] => 0
+    [D6] => 0
+    [12] => 4
+    [D7] => 4
+    [13] => 2100
+    [Calories_Burned] => 2100
+    [14] => 75
+    [Weight] => 75
+    [15] => 178
+    [Height] => 178
+)
+
+
+Success Login
+test1 == 
+log : Array
+(
+    [0] => 2
+    [id] => 2
+    [1] => Daming
+    [username] => Daming
+    [2] => haha
+    [password] => haha
+    [3] => 2
+    [Role] => 2
+)
+
+log trainee: Array
+(
+    [0] => 2
+    [ID] => 2
+    [1] => Daming
+    [username] => Daming
+    [2] => Daming
+    [FirstName] => Daming
+    [3] => Lu
+    [LastName] => Lu
+    [4] => 29
+    [Age] => 29
+    [5] => http://imgur.com/SvElSbt
+    [ImgURL] => http://imgur.com/SvElSbt
+    [6] => 4
+    [D1] => 4
+    [7] => 7
+    [D2] => 7
+    [8] => 2
+    [D3] => 2
+    [9] => 2
+    [D4] => 2
+    [10] => 13
+    [D5] => 13
+    [11] => 0
+    [D6] => 0
+    [12] => 4
+    [D7] => 4
+    [13] => 2100
+    [Calories_Burned] => 2100
+    [14] => 75
+    [Weight] => 75
+    [15] => 178
+    [Height] => 178
+)
+
+
+Success Login
+test1 == 
+log : Array
+(
+    [0] => 1
+    [id] => 1
+    [1] => Patrick
+    [username] => Patrick
+    [2] => the4Done
+    [password] => the4Done
+    [3] => 1
+    [Role] => 1
+)
+
+
+Success Login
+test1 == 
+log : Array
+(
+    [0] => 2
+    [id] => 2
+    [1] => Daming
+    [username] => Daming
+    [2] => haha
+    [password] => haha
+    [3] => 2
+    [Role] => 2
+)
+
+log trainee: Array
+(
+    [0] => 2
+    [ID] => 2
+    [1] => Daming
+    [username] => Daming
+    [2] => Daming
+    [FirstName] => Daming
+    [3] => Lu
+    [LastName] => Lu
+    [4] => 29
+    [Age] => 29
+    [5] => http://imgur.com/SvElSbt
+    [ImgURL] => http://imgur.com/SvElSbt
+    [6] => 4
+    [D1] => 4
+    [7] => 7
+    [D2] => 7
+    [8] => 2
+    [D3] => 2
+    [9] => 2
+    [D4] => 2
+    [10] => 13
+    [D5] => 13
+    [11] => 0
+    [D6] => 0
+    [12] => 4
+    [D7] => 4
+    [13] => 2100
+    [Calories_Burned] => 2100
+    [14] => 75
+    [Weight] => 75
+    [15] => 178
+    [Height] => 178
+)
+
+
+Success Login
+test1 == 
+log : Array
+(
+    [0] => 1
+    [id] => 1
+    [1] => Patrick
+    [username] => Patrick
+    [2] => the4Done
+    [password] => the4Done
+    [3] => 1
+    [Role] => 1
+)
+
+
+Success Login
+test1 == 
+log : Array
+(
+    [0] => 1
+    [id] => 1
+    [1] => Patrick
+    [username] => Patrick
+    [2] => the4Done
+    [password] => the4Done
+    [3] => 1
+    [Role] => 1
+)
+
+
+Success Login
+test1 == 
+log : Array
+(
+    [0] => 2
+    [id] => 2
+    [1] => Daming
+    [username] => Daming
+    [2] => haha
+    [password] => haha
+    [3] => 2
+    [Role] => 2
+)
+
+log trainee: Array
+(
+    [0] => 2
+    [ID] => 2
+    [1] => Daming
+    [username] => Daming
+    [2] => Daming
+    [FirstName] => Daming
+    [3] => Lu
+    [LastName] => Lu
+    [4] => 29
+    [Age] => 29
+    [5] => http://imgur.com/SvElSbt
+    [ImgURL] => http://imgur.com/SvElSbt
+    [6] => 4
+    [D1] => 4
+    [7] => 7
+    [D2] => 7
+    [8] => 2
+    [D3] => 2
+    [9] => 2
+    [D4] => 2
+    [10] => 13
+    [D5] => 13
+    [11] => 0
+    [D6] => 0
+    [12] => 4
+    [D7] => 4
+    [13] => 2100
+    [Calories_Burned] => 2100
+    [14] => 75
+    [Weight] => 75
+    [15] => 178
+    [Height] => 178
+)
+
+
+Success Login
+test1 == 
+log : Array
+(
+    [0] => 1
+    [id] => 1
+    [1] => Patrick
+    [username] => Patrick
+    [2] => the4Done
+    [password] => the4Done
+    [3] => 1
+    [Role] => 1
+)
+
+
+Success Login
+test1 == 
+log : Array
+(
+    [0] => 1
+    [id] => 1
+    [1] => Patrick
+    [username] => Patrick
+    [2] => the4Done
+    [password] => the4Done
+    [3] => 1
+    [Role] => 1
+)
+
+
+Success Login
+test1 == 
+log : Array
+(
+    [0] => 2
+    [id] => 2
+    [1] => Daming
+    [username] => Daming
+    [2] => haha
+    [password] => haha
+    [3] => 2
+    [Role] => 2
+)
+
+log trainee: Array
+(
+    [0] => 2
+    [ID] => 2
+    [1] => Daming
+    [username] => Daming
+    [2] => Daming
+    [FirstName] => Daming
+    [3] => Lu
+    [LastName] => Lu
+    [4] => 29
+    [Age] => 29
+    [5] => http://imgur.com/SvElSbt
+    [ImgURL] => http://imgur.com/SvElSbt
+    [6] => 4
+    [D1] => 4
+    [7] => 7
+    [D2] => 7
+    [8] => 2
+    [D3] => 2
+    [9] => 2
+    [D4] => 2
+    [10] => 13
+    [D5] => 13
+    [11] => 0
+    [D6] => 0
+    [12] => 4
+    [D7] => 4
+    [13] => 2100
+    [Calories_Burned] => 2100
+    [14] => 75
+    [Weight] => 75
+    [15] => 178
+    [Height] => 178
+)
+
+
+Success Login
+test1 == 
+log : Array
+(
+    [0] => 2
+    [id] => 2
+    [1] => Daming
+    [username] => Daming
+    [2] => haha
+    [password] => haha
+    [3] => 2
+    [Role] => 2
+)
+
+log trainee: Array
+(
+    [0] => 2
+    [ID] => 2
+    [1] => Daming
+    [username] => Daming
+    [2] => Daming
+    [FirstName] => Daming
+    [3] => Lu
+    [LastName] => Lu
+    [4] => 29
+    [Age] => 29
+    [5] => http://imgur.com/SvElSbt
+    [ImgURL] => http://imgur.com/SvElSbt
+    [6] => 4
+    [D1] => 4
+    [7] => 7
+    [D2] => 7
+    [8] => 2
+    [D3] => 2
+    [9] => 2
+    [D4] => 2
+    [10] => 13
+    [D5] => 13
+    [11] => 0
+    [D6] => 0
+    [12] => 4
+    [D7] => 4
+    [13] => 2100
+    [Calories_Burned] => 2100
+    [14] => 75
+    [Weight] => 75
+    [15] => 178
+    [Height] => 178
+)
+
+
+Success Login
+test1 == 
+log : Array
+(
+    [0] => 1
+    [id] => 1
+    [1] => Patrick
+    [username] => Patrick
+    [2] => the4Done
+    [password] => the4Done
+    [3] => 1
+    [Role] => 1
+)
+
+
+Success Login

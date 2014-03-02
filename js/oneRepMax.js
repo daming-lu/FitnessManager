@@ -1,10 +1,11 @@
 $('#oneRepMax').submit(function(e){
     e.preventDefault();
-    var weight = $('#weightx').val();
+    var weight = $('#weight-rep').val();
     var reps = $('#reps').val();
     var max = ((weight * 0.333 * reps) + weight);
     var result = Math.floor(max);
-    console.log(result);
-    console.log(weight + "," + reps);
-    $('#result').html(result);
+
+    $('#rep-max #result-small, #rep-max #result-medium, #rep-max #result-large').html(result);
+    $('#rep-max #result-small, #rep-max #result-medium, #rep-max #result-large').effect("bounce", "slow");
+    
 })
