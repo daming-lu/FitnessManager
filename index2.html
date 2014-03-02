@@ -85,10 +85,18 @@
 
 	<aside class="left-off-canvas-menu">
 	  <ul class="off-canvas-list">
+	    <li class="has-form give-me-space">
+	      <a href="#" class="button">Add client</a>
+	    </li>
             <li><label>Links</label></li>
 	    <li><a href="#panel1a">Dashboard</a></li>
 	    <li><a href="#panel2a">Clients</a></li>
 	    <li><a href="#panel3a">Calculators</a></li>
+            <li><label>Calculators</label></li>
+	    <li><a href="#panel2-1">BMR</a></li>
+	    <li><a href="#panel2-2">Protein</a></li>
+	    <li><a href="#panel2-3">BMI</a></li>
+	    <li><a href="#panel2-4">1 Rep Max</a></li>
 	  </ul>
 	</aside>
 	<section class="main-section">
@@ -142,7 +150,7 @@
 	    <dd class="entypo-users"><a href="#panel2a">Clients</a></dd>
 	    <dd class="entypo-plus-squared"><a href="#panel3a">Calculators</a></dd>
 	  </dl>
-	  <div class="tabs-content vertical">
+	  <div id="main-content" class="tabs-content vertical">
 	    <div class="content active" id="panel1a">
 	      <div class="row">
 		<a href="#" data-dropdown="drop" class="button button-box-shadow tiny radius dropdown">Billy Paneda</a><br>
@@ -457,13 +465,14 @@
 		  <div class="content " id="panel2-4">
 		    <p>(Weight x 0.0333 x Reps) + Weight</p>
 		    <div id="rep-max" class="panel small-12 medium-6 medium-centered columns">
-		      <form id="oneRepMax" name="oneRepMax" onsubmit="return oneRepMax();">
+		      <form id="oneRepMax" name="oneRepMax">
 			<label>Weight(lb):</label>
-			<input id="weight" type="text" name="weight">
+			<input id="weightx" type="text" name="weight">
 			<label>Reps:</label>
 			<input id="reps" type="text" name="reps">
 			<input class="button radius" type="submit" value="Calculate">
 		      </form>
+		      <div id="result"></div>
 		      <div id="result-large" class="show-for-large-up">1115</div>
 		      <div id="result-medium" class="show-for-medium-only">1115</div>
 		      <div id="result-small" class="show-for-small-only">1115</div>

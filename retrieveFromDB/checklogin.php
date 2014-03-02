@@ -37,7 +37,9 @@ if($count==1){
 
 // ###
 
+// for trainee
 $dataFileAbsPath = "/home/damlu/peirongli.dreamhosters.com/WiX/FitnessManager2/data_Miles7days.tsv";
+
 $con = mysqli_connect("$host", "$username", "$password","$db_name");
 $result = mysqli_query($con,"SELECT * FROM $tbl_name WHERE username='$myusername' and password='$mypassword'");
 while($row = mysqli_fetch_array($result))
@@ -70,6 +72,49 @@ while($row = mysqli_fetch_array($result))
 			
 		}
 	
+	} else {
+		$id = $row['id'];
+		$This_Trainer = "/home/damlu/peirongli.dreamhosters.com/WiX/FitnessManager2/data_ThisTrainer.tsv";
+		$His_Trainees = "/home/damlu/peirongli.dreamhosters.com/WiX/FitnessManager2/data_HisTrainees.tsv";
+		
+		// get Trainer's profile
+		
+		file_put_contents($This_Trainer,"ID\tusername\tFirstName\tLastName\tAge\tImgURL\tYearsOfExp\tProfLevel\tRatingStarts\n",LOCK_EX);		
+		
+		$resultTrainer = mysqli_query($con,"SELECT * FROM Trainers WHERE ID=$id");
+		while($rowTrainer = mysqli_fetch_array($resultTrainer)){
+			//echo "heeeee";
+			file_put_contents("log2", "log trainer: ".print_r($rowTrainer,true)."\n",LOCK_EX | FILE_APPEND);
+			for($i=0; $i<count($rowTrainer); $i++){
+				file_put_contents("log2", print_r($rowTrainer[$i],true)."\n",LOCK_EX | FILE_APPEND);
+				file_put_contents($This_Trainer, $rowTrainer[$i],LOCK_EX | FILE_APPEND);
+				if($i == count($rowTrainer)-1){
+					file_put_contents($This_Trainer,"\n",LOCK_EX | FILE_APPEND);
+				} else {
+					file_put_contents($This_Trainer,"\t",LOCK_EX | FILE_APPEND);
+				}
+			}		
+		}	
+		
+		// get this Trainer's Trainee List
+		file_put_contents($His_Trainees,"ID\tusername\tFirstName\tLastName\tAge\tD1\tD2\tD3\tD4\tD5\tD6\tD7\tCalories_Burned\tWeight\tHeight\n",LOCK_EX);		
+		
+		$resultTrainees = mysqli_query($con,"SELECT * from Trainees WHERE Trainees.ID in (SELECT Trainee_ID from Xref WHERE Trainer_ID = 1)");
+		while($rowTrainee = mysqli_fetch_array($resultTrainees)){
+			//echo "heeeee";
+			//file_put_contents($His_Trainees, "log trainee: ".print_r($rowTrainee,true)."\n",LOCK_EX | FILE_APPEND);
+			file_put_contents("log4", "log trainee: ".print_r($rowTrainee,true)."\n",LOCK_EX | FILE_APPEND);
+			for($i=0; $i<count($rowTrainee); $i++){
+				//file_put_contents($His_Trainees, print_r($rowTrainee[$i],true)."\n",LOCK_EX | FILE_APPEND);
+				file_put_contents($His_Trainees, $rowTrainee[$i],LOCK_EX | FILE_APPEND);
+				if($i == count($rowTrainee)-1){
+					file_put_contents($His_Trainees,"\n",LOCK_EX | FILE_APPEND);
+				} else {
+					file_put_contents($His_Trainees,"\t",LOCK_EX | FILE_APPEND);
+				}
+			}		
+		}		
+		
 	}
 	
 	//echo $row['Letter'] . " " . $row['Frequency'];
@@ -85,7 +130,7 @@ while($row = mysqli_fetch_array($result))
 // ### 
 
 file_put_contents("log1","\nSuccess Login\n",FILE_APPEND|LOCK_EX);
-
+//echo "haha";
 //header("location:login_success.php");
 //header("location:http://peirongli.dreamhosters.com/WiX/FitnessManager/#");
 header("location: http://peirongli.dreamhosters.com/WiX/FitnessManager2/D3_hist.html?p1=$rowId");

@@ -39,6 +39,23 @@
 }
 .tabs.vertical dd > a { padding-left: 2.8em; }
 .off-canvas-wrap, .off-canvas-wrap .inner-wrap, .main-section { height: 100%; }
+.off-canvas-list label { width: 100%; }
+.off-canvas-list .button {
+    border-radius: 3px;
+    background: #eb9628;
+    box-shadow: 0px 4px #C37D23;
+    -webkit-transition: box-shadow;
+    margin-bottom: 0;
+    margin: 5px 0;
+ }
+.off-canvas-list .button:hover { 
+    background: #DB8D28; 
+    box-shadow: 0px 4px #925C18;
+}
+.off-canvas-list .give-me-space {
+    padding: 0 5px 5px 5px;
+}
+ul.off-canvas-list li a { border: none; }
 #fitness-manager-logo {
     position: fixed;
     bottom: 0;
@@ -56,6 +73,9 @@
 #sidebar {
     height: 100%;
     background: #efefef;
+}
+#main-content {
+    border: 1px solid gainsboro;
 }
 dl.tabs.vertical dd {
     border-bottom: 1px solid rgb(222, 220, 220);

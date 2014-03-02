@@ -11,7 +11,7 @@
     box-shadow: 0px 4px #027DA6;
     -webkit-transition: background box-shadow 0.2s;
     transition: background box-shadow 0.2s;
-    width: 50%;
+    width: 100%;
     padding: 7px 0;
     margin-bottom: 0;
 }
